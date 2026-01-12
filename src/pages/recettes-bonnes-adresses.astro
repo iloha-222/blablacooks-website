@@ -47,7 +47,10 @@ const allItems = [...bonnesAdresses, ...recettes];
 const allCountries = [...new Set(allItems.map(item => item.country))].sort();
 ---
 
-<Layout title="Recettes & Bonnes Adresses - Blablacooks">
+<Layout
+  title="Recettes & Bonnes Adresses - Blablacooks"
+  description="Découvrez les recettes du monde partagées par nos adhérents et les bonnes adresses pour voyager gustativement à Montpellier. Restaurants, épiceries et saveurs interculturelles."
+>
   <!-- Hero Section -->
   <section class="page-hero">
     <div class="container">
