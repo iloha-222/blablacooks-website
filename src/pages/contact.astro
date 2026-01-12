@@ -1,0 +1,404 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Contact - Blablacooks">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-content" data-animate>
+        <span class="label label-terracotta">Contactez-nous</span>
+        <h1>Restons en contact</h1>
+        <p class="hero-desc">
+          Une question, une envie de participer ou simplement dire bonjour ?
+          N'hésitez pas à nous écrire, nous serons ravis d'échanger avec vous.
+        </p>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Cards -->
+        <div class="contact-cards" data-animate>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <img src="/icons/noun-email-5366295.svg" alt="" />
+            </div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <p>Pour toute question ou demande</p>
+              <a href="mailto:contact@blablacooks.com" class="contact-link">contact@blablacooks.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon icon-gold">
+              <img src="/icons/noun-location-8077585.svg" alt="" />
+            </div>
+            <div class="contact-info">
+              <h3>Localisation</h3>
+              <p>Nos ateliers se déroulent à</p>
+              <span class="contact-text">Montpellier, France</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon icon-sage">
+              <img src="/icons/noun-group-8132009.svg" alt="" />
+            </div>
+            <div class="contact-info">
+              <h3>Réseaux sociaux</h3>
+              <p>Suivez nos actualités</p>
+              <div class="social-links">
+                <a href="https://www.instagram.com/blablacooks/" target="_blank" rel="noopener" class="social-link">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="18" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+                  </svg>
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/blablacooks" target="_blank" rel="noopener" class="social-link">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper" data-animate>
+          <div class="form-card">
+            <h2>Envoyez-nous un message</h2>
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="form-group">
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" name="name" required placeholder="Jean Dupont" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Votre email</label>
+                <input type="email" id="email" name="email" required placeholder="jean@exemple.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Choisissez un sujet</option>
+                  <option value="ateliers">Question sur les ateliers</option>
+                  <option value="adhesion">Devenir adhérent</option>
+                  <option value="benevole">Devenir bénévole</option>
+                  <option value="partenariat">Proposition de partenariat</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Écrivez votre message ici..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--space-3xl) + 80px) 0 var(--space-xl);
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    margin: var(--space-md) 0;
+  }
+
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+  }
+
+  .hero-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero-decoration .blob-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+  }
+
+  .hero-decoration .blob-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: 10%;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: var(--space-lg) 0 var(--space-2xl);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  /* Contact Cards */
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact-card {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .contact-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(196, 87, 59, 0.1);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+  }
+
+  .contact-icon img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(600%) hue-rotate(340deg);
+  }
+
+  .contact-icon.icon-gold {
+    background: rgba(212, 161, 74, 0.15);
+  }
+
+  .contact-icon.icon-gold img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(50%) saturate(500%) hue-rotate(10deg);
+  }
+
+  .contact-icon.icon-sage {
+    background: rgba(143, 166, 134, 0.15);
+  }
+
+  .contact-icon.icon-sage img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(15%) saturate(400%) hue-rotate(70deg);
+  }
+
+  .contact-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-link {
+    font-weight: 600;
+    color: var(--color-terracotta);
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: var(--color-terracotta-dark);
+  }
+
+  .contact-text {
+    font-weight: 500;
+    color: var(--color-brown-dark);
+  }
+
+  .social-links {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-brown);
+    padding: 0.4rem 0.8rem;
+    background: var(--color-cream);
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background: var(--color-terracotta);
+    color: white;
+  }
+
+  /* Contact Form */
+  .form-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .form-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-brown-dark);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.9rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-brown-dark);
+    background: var(--color-cream);
+    border: 2px solid var(--color-sand);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+    background: white;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-taupe);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235C4A3D' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--space-sm);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .contact-cards {
+      order: 2;
+    }
+
+    .contact-form-wrapper {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: calc(var(--space-2xl) + 80px) 0 var(--space-lg);
+    }
+
+    .form-card {
+      padding: var(--space-md);
+    }
+
+    .contact-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-icon {
+      margin: 0 auto;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+  }
+</style>

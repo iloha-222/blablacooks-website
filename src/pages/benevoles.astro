@@ -1,0 +1,347 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Devenir bénévole - Blablacooks">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-animate>
+          <span class="label label-terracotta">Rejoignez-nous</span>
+          <h1>Appel à bénévoles</h1>
+          <p class="hero-desc">
+            Vous souhaitez participer au projet Blablacooks ? Il existe plusieurs manières
+            de vous impliquer et plusieurs temporalités ; d'une demi-journée ponctuelle
+            à quelques jours par mois.
+          </p>
+        </div>
+        <div class="hero-illustration" data-animate>
+          <img src="/perso-tabliers-bleus/2.webp" alt="Bénévole Blablacooks" class="hero-perso" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+  </section>
+
+  <!-- Missions Section -->
+  <section class="missions-section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Comment vous impliquer ?</h2>
+        <p>Voici quelques idées pour contribuer à notre projet</p>
+      </div>
+
+      <div class="missions-grid">
+        <div class="mission-card" data-animate>
+          <div class="mission-icon">
+            <img src="/icons/noun-cooking-academy-5381426.svg" alt="" />
+          </div>
+          <h3>Animation d'ateliers</h3>
+          <p>Participer à l'organisation et/ou à l'animation des ateliers de cuisine participative Blablacooks.</p>
+        </div>
+
+        <div class="mission-card" data-animate>
+          <div class="mission-icon icon-gold">
+            <img src="/icons/noun-french-1054568.svg" alt="" />
+          </div>
+          <h3>Accompagnement linguistique</h3>
+          <p>Aider ponctuellement pour un document administratif en français, ou accompagner des personnes dans leur apprentissage de la langue (F.L.I.).</p>
+        </div>
+
+        <div class="mission-card" data-animate>
+          <div class="mission-icon icon-sage">
+            <img src="/icons/noun-globe-6688733.svg" alt="" />
+          </div>
+          <h3>Développer des partenariats</h3>
+          <p>Nous mettre en relation avec une autre association ou entreprise, développer des partenariats.</p>
+        </div>
+
+        <div class="mission-card" data-animate>
+          <div class="mission-icon icon-blue">
+            <img src="/icons/noun-talk-7544702.svg" alt="" />
+          </div>
+          <h3>Partager vos idées</h3>
+          <p>Nous partager une idée, développer d'autres projets avec nous.</p>
+        </div>
+
+        <div class="mission-card" data-animate>
+          <div class="mission-icon">
+            <img src="/icons/noun-finance-8238945.svg" alt="" />
+          </div>
+          <h3>Veille financements</h3>
+          <p>Nous faire suivre l'information sur un appel d'offre, faire une veille financements, répondre à des appels d'offre.</p>
+        </div>
+
+        <div class="mission-card" data-animate>
+          <div class="mission-icon icon-gold">
+            <img src="/icons/noun-location-8077585.svg" alt="" />
+          </div>
+          <h3>Trouver un lieu</h3>
+          <p>Nous aider à chercher un lieu fixe pour nos activités... La liste est longue !</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card" data-animate>
+        <div class="cta-content">
+          <h2>Ça vous intéresse ?</h2>
+          <p>Envoyez-nous un message pour nous rejoindre ou en savoir plus sur nos besoins actuels.</p>
+          <a href="mailto:contact@blablacooks.com" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Nous contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--space-3xl) + 80px) 0 var(--space-xl);
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 550px;
+  }
+
+  .hero-content h1 {
+    margin: var(--space-md) 0;
+  }
+
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+    line-height: 1.7;
+  }
+
+  .hero-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-perso {
+    width: 320px;
+    height: auto;
+    filter: drop-shadow(0 15px 40px rgba(92, 74, 61, 0.2));
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .hero-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero-decoration .blob-1 {
+    width: 500px;
+    height: 500px;
+    top: -150px;
+    right: -150px;
+  }
+
+  .hero-decoration .blob-2 {
+    width: 350px;
+    height: 350px;
+    bottom: -100px;
+    left: 5%;
+  }
+
+  /* Missions Section */
+  .missions-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-header h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+    color: var(--color-brown);
+    opacity: 0.7;
+    margin: 0 auto;
+  }
+
+  .missions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .mission-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .mission-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(196, 87, 59, 0.1);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .mission-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(600%) hue-rotate(340deg);
+  }
+
+  .mission-icon.icon-gold {
+    background: rgba(212, 161, 74, 0.15);
+  }
+
+  .mission-icon.icon-gold img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(50%) saturate(500%) hue-rotate(10deg);
+  }
+
+  .mission-icon.icon-sage {
+    background: rgba(143, 166, 134, 0.15);
+  }
+
+  .mission-icon.icon-sage img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(15%) saturate(400%) hue-rotate(70deg);
+  }
+
+  .mission-icon.icon-blue {
+    background: rgba(126, 154, 175, 0.15);
+  }
+
+  .mission-icon.icon-blue img {
+    filter: brightness(0) saturate(100%) invert(60%) sepia(20%) saturate(400%) hue-rotate(170deg);
+  }
+
+  .mission-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .mission-card p {
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .cta-card {
+    background: var(--color-brown-dark);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    text-align: center;
+  }
+
+  .cta-content {
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--color-cream);
+  }
+
+  .cta-content h2 {
+    color: var(--color-cream);
+    margin-bottom: var(--space-sm);
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: var(--space-lg);
+  }
+
+  .cta-content .btn {
+    background: var(--color-terracotta);
+    color: white;
+  }
+
+  .cta-content .btn:hover {
+    background: var(--color-terracotta-light);
+    transform: translateY(-3px);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .hero-content {
+      max-width: none;
+      text-align: center;
+    }
+
+    .missions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: calc(var(--space-2xl) + 80px) 0 var(--space-lg);
+    }
+
+    .hero-perso {
+      width: 220px;
+    }
+
+    .missions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+      padding: var(--space-lg);
+    }
+  }
+</style>

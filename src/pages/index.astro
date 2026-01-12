@@ -1,0 +1,1361 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Blablacooks - Les ateliers qui font parler">
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HERO SECTION - Asymmetric composition with floating characters
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <!-- Background elements -->
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="hero-pattern"></div>
+    </div>
+
+    <div class="hero-container">
+      <!-- Left content -->
+      <div class="hero-content">
+        <span class="hero-label animate-fade-up">Association interculturelle • Montpellier</span>
+        <h1 class="hero-title animate-fade-up delay-1">
+          Les ateliers<br/>
+          <span class="hero-title-accent">qui font parler</span>
+        </h1>
+        <p class="hero-desc animate-fade-up delay-2">
+          Découvrez la cuisine, la couture et la langue française à travers le prisme de l'échange interculturel. Partagez, apprenez, rencontrez.
+        </p>
+        <div class="hero-actions animate-fade-up delay-3">
+          <a href="#activites" class="btn btn-primary">
+            Découvrir nos ateliers
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/a-propos" class="btn btn-secondary">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Right: Character illustration composition -->
+      <div class="hero-visual">
+        <div class="hero-characters">
+          <!-- Quinconce: 3 en haut, 2 en bas -->
+          <div class="char-row char-row-top">
+            <div class="char animate-float">
+              <img src="/perso-nationalites/Libanaise.webp" alt="" />
+            </div>
+            <div class="char animate-float-delayed">
+              <img src="/perso-nationalites/Ethiopienne.webp" alt="" />
+            </div>
+            <div class="char animate-float">
+              <img src="/perso-nationalites/Tibetain.webp" alt="" />
+            </div>
+          </div>
+          <div class="char-row char-row-bottom">
+            <div class="char animate-float-delayed">
+              <img src="/perso-nationalites/Armenienne.webp" alt="" />
+            </div>
+            <div class="char animate-float">
+              <img src="/perso-nationalites/Bresilienne.webp" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative circle behind -->
+        <div class="hero-decor">
+          <div class="decor-circle-bg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Découvrir</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       MISSION SECTION - Full-width statement with photos
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="mission">
+    <div class="mission-bg grain"></div>
+
+    <div class="container">
+      <div class="mission-content" data-animate>
+        <div class="mission-icon">
+          <img src="/icons/noun-globe-6688733.svg" alt="" width="48" height="48" />
+        </div>
+        <h2 class="mission-title">
+          Créer des ponts entre les cultures, une recette à la fois
+        </h2>
+        <div class="divider divider-center"></div>
+        <p class="mission-text">
+          Blablacooks favorise la création de liens interculturels et participe à l'inclusion sociale par la mise en lumière et le partage des richesses culturelles et des savoir-faire des nouveaux arrivants dans la région de Montpellier.
+        </p>
+      </div>
+
+      <!-- Photo mosaic -->
+      <div class="mission-photos" data-animate>
+        <div class="photo-card photo-1">
+          <img src="/vrais-photos/a propos.jpg" alt="Atelier de cuisine" />
+          <div class="photo-overlay"></div>
+        </div>
+        <div class="photo-card photo-2">
+          <img src="/vrais-photos/a propos-.png" alt="Participants" />
+          <div class="photo-overlay"></div>
+        </div>
+        <div class="photo-card photo-3">
+          <img src="/vrais-photos/a propos-2.png" alt="Moment de partage" />
+          <div class="photo-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       ACTIVITIES SECTION - 3 distinctive cards
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="activites" class="activities section-lg">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="label label-terracotta">Nos activités</span>
+        <h2>Trois façons de se rencontrer</h2>
+        <p class="section-desc">Chaque atelier est une invitation au voyage et à l'échange</p>
+      </div>
+
+      <div class="activities-grid">
+        <!-- Cuisine Card -->
+        <a href="/ateliers-cuisine" class="activity-card activity-cuisine" data-animate>
+          <div class="activity-visual">
+            <div class="activity-img-wrapper">
+              <img src="/vrais-photos/atelier de cuisine.png" alt="Atelier cuisine" class="activity-img" />
+            </div>
+            <div class="activity-badge">Cuisine</div>
+          </div>
+          <div class="activity-content">
+            <h3>Ateliers Cuisine</h3>
+            <p>Explorez les saveurs du monde avec nos chefs venus des quatre coins du globe. Chaque atelier est un voyage culinaire.</p>
+            <div class="activity-tags">
+              <span>Brésil</span>
+              <span>Cameroun</span>
+              <span>Ukraine</span>
+              <span>+15</span>
+            </div>
+            <span class="activity-link">
+              Découvrir les ateliers
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Couture Card -->
+        <a href="/ateliers-couture" class="activity-card activity-couture" data-animate>
+          <div class="activity-visual">
+            <div class="activity-img-wrapper">
+              <img src="/vrais-photos/atelier de couture.png" alt="Atelier couture" class="activity-img" />
+            </div>
+            <div class="activity-badge">Couture</div>
+          </div>
+          <div class="activity-content">
+            <h3>Ateliers Couture</h3>
+            <p>Découvrez l'art de la couture à travers différentes traditions textiles. Créez, réparez, personnalisez.</p>
+            <div class="activity-tags">
+              <span>Initiation</span>
+              <span>Réparation</span>
+              <span>Création</span>
+            </div>
+            <span class="activity-link">
+              Voir les ateliers
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Français Card -->
+        <a href="/francais-interculturel" class="activity-card activity-francais" data-animate>
+          <div class="activity-visual">
+            <div class="activity-img-wrapper">
+              <img src="/vrais-photos/atelier linguistique other.png" alt="Atelier français" class="activity-img" />
+            </div>
+            <div class="activity-badge">Français</div>
+          </div>
+          <div class="activity-content">
+            <h3>Français Interculturel</h3>
+            <p>Pratiquez le français dans un cadre convivial et multiculturel. Conversation, échanges et bienveillance.</p>
+            <div class="activity-tags">
+              <span>Niveau A1</span>
+              <span>Conversation</span>
+              <span>Échange</span>
+            </div>
+            <span class="activity-link">
+              En savoir plus
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAST EVENTS - Recent workshops with details
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="past-events section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="label label-sage">Retour en images</span>
+        <h2>Nos derniers événements</h2>
+      </div>
+
+      <div class="past-grid">
+        <!-- Event 1 -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/Evenement-noel.jpg" alt="Brunch de Fête Afghan" class="pos-center" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">7 Décembre 2025</span>
+            <h3>Brunch de Fête Afghan</h3>
+            <p>Mantus, raviolis à la viande et aux épices avec sauce au yaourt, et ferni aux pistaches. Avec Fawzia Rahmani.</p>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/atelier ukrainien passé2.jpeg" alt="Festin Ukrainien et Géorgien" class="pos-center" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">12 Octobre 2025</span>
+            <h3>Festin Ukrainien & Géorgien</h3>
+            <p>Salade d'automne, sauce rouge épicée aux prunes, tortore et roulés d'aubergines aux noix. Avec Natalia Bieliakova.</p>
+          </div>
+        </article>
+
+        <!-- Event 3 -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/atelier-camerounais.jpg" alt="Cuisine Camerounaise" class="pos-center" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">21 Septembre 2025</span>
+            <h3>Cuisine Camerounaise</h3>
+            <p>Poulet DG à la banane plantain et aux épices, accompagné d'un bissap hibiscus et gingembre. Avec Yaya Ngouowoud.</p>
+          </div>
+        </article>
+
+        <!-- Event 4 -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/atelier-bresilien.jpg" alt="Cuisine Brésilienne" class="pos-center" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">18 Mai 2025</span>
+            <h3>Cuisine Brésilienne</h3>
+            <p>Moqueca de Salvador de Bahia, accompagnée de riz, Farofa et vinegrate. Avec Eloa Sena et Anaïs Josy.</p>
+          </div>
+        </article>
+
+        <!-- Event 5 -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/a propos.jpg" alt="Atelier Tibétain" class="pos-center" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">12 Avril 2025</span>
+            <h3>Saveurs du Tibet</h3>
+            <p>Momos vapeur farcis aux légumes et sauce piquante traditionnelle. Avec Tenzin Dawa.</p>
+          </div>
+        </article>
+
+        <!-- Event 6 -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/a propos-.png" alt="Cuisine Libanaise" class="pos-top" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">15 Mars 2025</span>
+            <h3>Mezze Libanais</h3>
+            <p>Houmous, taboulé et falafels maison avec pita chaud. Avec Nour El-Khoury.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       UPCOMING EVENTS - Featured next workshops
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="upcoming section">
+    <div class="upcoming-bg">
+      <div class="upcoming-pattern"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header section-header-light" data-animate>
+        <span class="label label-gold">Prochainement</span>
+        <h2>Nos événements à venir</h2>
+        <p class="section-desc">Réservez votre place pour nos prochains ateliers</p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Event 1: Couture -->
+        <article class="event-card" data-animate>
+          <div class="event-image">
+            <img src="/vrais-photos/couture-atelier.png" alt="Ateliers Blablacouture" />
+            <div class="event-status status-ongoing">En cours</div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span class="event-category cat-couture">
+                <img src="/icons/noun-sew-4331889.svg" alt="" class="event-icon" />
+                Couture
+              </span>
+              <span class="event-date">9 Jan → 20 Fév 2026</span>
+            </div>
+            <h3 class="event-title">Ateliers Blablacouture</h3>
+            <p class="event-desc">Initiez-vous à la couture avec La Cimade dans un espace de rencontre interculturelle.</p>
+            <div class="event-details">
+              <div class="detail">
+                <img src="/icons/horaire.svg" alt="" class="detail-icon" />
+                Vendredis, 9h-12h
+              </div>
+              <div class="detail">
+                <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
+                MPT Voltaire
+              </div>
+            </div>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-blablacouture-automne-2" target="_blank" class="btn btn-event btn-gold">
+              S'inscrire
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Event 2: Linguistique -->
+        <article class="event-card" data-animate>
+          <div class="event-image">
+            <img src="/vrais-photos/atelier linguistique.png" alt="Atelier Linguistique" />
+            <div class="event-status status-new">Nouveau</div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span class="event-category cat-francais">
+                <img src="/icons/noun-talk-7544702.svg" alt="" class="event-icon" />
+                Français
+              </span>
+              <span class="event-date">20 Jan → 17 Fév 2026</span>
+            </div>
+            <h3 class="event-title">Atelier Linguistique</h3>
+            <p class="event-desc">Cours de français A1 animés par Véronique André. Communication pour la vie quotidienne.</p>
+            <div class="event-details">
+              <div class="detail">
+                <img src="/icons/horaire.svg" alt="" class="detail-icon" />
+                Mardis, 14h-15h30
+              </div>
+              <div class="detail">
+                <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
+                MPT Frédéric Chopin
+              </div>
+            </div>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-linguistique" target="_blank" class="btn btn-event btn-blue">
+              S'inscrire
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Event 3: Brunch -->
+        <article class="event-card event-featured" data-animate>
+          <div class="event-image">
+            <img src="/vrais-photos/brunch camerounais.png" alt="Brunch Camerounais" />
+            <div class="event-status status-cuisine">Cuisine</div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span class="event-category cat-cuisine">
+                <img src="/icons/noun-chef-hat-6972227.svg" alt="" class="event-icon" />
+                Cuisine
+              </span>
+              <span class="event-date">8 Février 2026</span>
+            </div>
+            <h3 class="event-title">Brunch Camerounais</h3>
+            <p class="event-desc">Beignets de haricots croustillants et bouillie crémeuse, tradition matinale d'Afrique de l'Ouest avec Adèle Nguelefack.</p>
+            <div class="event-tags-dietary">
+              <span>végétarien</span>
+              <span>sans gluten</span>
+            </div>
+            <div class="event-details">
+              <div class="detail">
+                <img src="/icons/horaire.svg" alt="" class="detail-icon" />
+                10h45 - 14h
+              </div>
+              <div class="detail">
+                <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
+                Halle Tropisme
+              </div>
+            </div>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-brunch-camerounais" target="_blank" class="btn btn-event btn-terracotta">
+              Réserver ma place
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CTA SECTION - Join us
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="cta-section" id="contact">
+    <div class="cta-bg">
+      <div class="cta-shape cta-shape-1"></div>
+      <div class="cta-shape cta-shape-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="cta-content" data-animate>
+        <div class="cta-icon">
+          <img src="/icons/noun-group-8132009.svg" alt="" />
+        </div>
+
+        <h2>Prêt à rejoindre<br/>l'aventure ?</h2>
+        <p>Inscrivez-vous à nos ateliers et découvrez la richesse de l'échange interculturel</p>
+
+        <div class="cta-actions">
+          <a href="/ateliers-cuisine" class="btn btn-ghost">
+            Voir les ateliers cuisine
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="mailto:blablacooks@gmail.com" class="btn btn-ghost">
+            Nous contacter
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════════
+     HERO SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(80px + var(--space-xl)) 0 var(--space-xl);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .hero-bg .blob-1 {
+    width: 600px;
+    height: 600px;
+    top: -100px;
+    right: -200px;
+  }
+
+  .hero-bg .blob-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -50px;
+    left: -100px;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: radial-gradient(circle at 2px 2px, var(--color-sand) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.4;
+    mask-image: linear-gradient(to left, black, transparent);
+  }
+
+  .hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-title {
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-title-accent {
+    color: var(--color-terracotta);
+    font-style: italic;
+  }
+
+  .hero-desc {
+    font-size: 1.25rem;
+    color: var(--color-brown);
+    margin-bottom: var(--space-lg);
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-brown-dark);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--color-taupe);
+    margin-top: 0.25rem;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-sand);
+  }
+
+  /* Hero Visual - Character Composition */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-characters {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .char-row {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .char-row-bottom {
+    margin-top: -20px;
+  }
+
+  .char {
+    filter: drop-shadow(0 10px 25px rgba(92, 74, 61, 0.15));
+    transition: transform 0.4s var(--ease-out-expo);
+  }
+
+  .char:hover {
+    transform: scale(1.1) translateY(-8px);
+    z-index: 10;
+  }
+
+  .char img {
+    width: 204px;
+    height: auto;
+  }
+
+  /* Hero decorations */
+  .hero-decor {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .decor-circle-bg {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: 2px dashed var(--color-sand);
+    opacity: 0.5;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .scroll-indicator span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-taupe);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--color-terracotta), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 1; transform: scaleY(1); }
+    50% { opacity: 0.5; transform: scaleY(0.6); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MISSION SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .mission {
+    position: relative;
+    background: var(--color-terracotta);
+    padding: var(--space-3xl) 0;
+    overflow: hidden;
+  }
+
+  .mission-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .mission-content {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-2xl);
+    color: white;
+  }
+
+  .mission-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    opacity: 0.85;
+  }
+
+  .mission-icon img {
+    filter: brightness(0) invert(1) sepia(1) saturate(0.5) hue-rotate(10deg);
+  }
+
+  .mission-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 500;
+    color: white;
+    margin-bottom: var(--space-md);
+  }
+
+  .mission .divider {
+    background: linear-gradient(90deg, transparent, var(--color-gold-light), transparent);
+  }
+
+  .mission-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  /* Photo mosaic */
+  .mission-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-md);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .photo-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+
+  .photo-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+
+  .photo-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .photo-1 { transform: rotate(-3deg); }
+  .photo-2 { transform: translateY(20px); }
+  .photo-3 { transform: rotate(2deg); }
+
+  .photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(61, 48, 41, 0.3), transparent);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     ACTIVITIES SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .activities {
+    background: var(--color-cream);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    margin-top: var(--space-sm);
+  }
+
+  .section-desc {
+    color: var(--color-brown);
+    opacity: 0.7;
+    margin-top: var(--space-xs);
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .activity-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: all 0.5s var(--ease-out-expo);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .activity-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .activity-visual {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .activity-img-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  .activity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+
+  .activity-card:hover .activity-img {
+    transform: scale(1.08);
+  }
+
+  .activity-badge {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(10px);
+  }
+
+  .activity-cuisine .activity-badge {
+    background: rgba(196, 87, 59, 0.9);
+    color: white;
+  }
+
+  .activity-couture .activity-badge {
+    background: rgba(212, 161, 74, 0.9);
+    color: white;
+  }
+
+  .activity-francais .activity-badge {
+    background: rgba(126, 154, 175, 0.9);
+    color: white;
+  }
+
+  .activity-content {
+    padding: var(--space-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .activity-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .activity-content p {
+    color: var(--color-brown);
+    opacity: 0.75;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .activity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .activity-tags span {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    background: var(--color-cream-dark);
+    color: var(--color-brown);
+    border-radius: var(--radius-full);
+  }
+
+  .activity-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: gap 0.3s ease;
+  }
+
+  .activity-cuisine .activity-link { color: var(--color-terracotta); }
+  .activity-couture .activity-link { color: var(--color-gold); }
+  .activity-francais .activity-link { color: var(--color-dusty-blue); }
+
+  .activity-card:hover .activity-link {
+    gap: 0.75rem;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     UPCOMING EVENTS SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .upcoming {
+    position: relative;
+    background: var(--color-cream-dark);
+    overflow: hidden;
+  }
+
+  .upcoming-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .upcoming-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, var(--color-sand) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+  }
+
+  .section-header-light h2 {
+    color: var(--color-brown-dark);
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .event-card {
+    position: relative;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--ease-out-expo);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .event-image {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  .event-card:hover .event-image img {
+    transform: scale(1.05);
+  }
+
+  .event-status {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: var(--radius-full);
+    color: white;
+  }
+
+  .status-ongoing { background: var(--color-gold); }
+  .status-new { background: var(--color-dusty-blue); }
+  .status-cuisine { background: var(--color-terracotta); }
+
+  .event-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .event-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-sm);
+  }
+
+  .event-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .cat-cuisine { color: var(--color-terracotta); }
+  .cat-couture { color: var(--color-gold); }
+  .cat-francais { color: var(--color-dusty-blue); }
+
+  .event-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cat-cuisine .event-icon {
+    filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
+  }
+
+  .cat-couture .event-icon {
+    filter: invert(70%) sepia(50%) saturate(500%) hue-rotate(5deg) brightness(95%) contrast(90%);
+  }
+
+  .cat-francais .event-icon {
+    filter: invert(65%) sepia(15%) saturate(500%) hue-rotate(175deg) brightness(90%) contrast(85%);
+  }
+
+  .event-date {
+    font-size: 0.8rem;
+    color: var(--color-taupe);
+  }
+
+  .event-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .event-desc {
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .event-tags-dietary {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .event-tags-dietary span {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    background: var(--color-sage-light);
+    color: var(--color-sage);
+    border-radius: var(--radius-full);
+    font-weight: 500;
+  }
+
+  .event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-brown);
+    opacity: 0.7;
+  }
+
+  .detail-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+    filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
+  }
+
+  .detail svg {
+    opacity: 0.6;
+  }
+
+  .btn-event {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+    margin-top: auto;
+  }
+
+  .btn-terracotta {
+    background: var(--color-terracotta);
+    color: white;
+  }
+
+  .btn-terracotta:hover {
+    background: var(--color-terracotta-dark);
+  }
+
+  .btn-gold {
+    background: var(--color-gold);
+    color: white;
+  }
+
+  .btn-gold:hover {
+    background: #c4941f;
+  }
+
+  .btn-blue {
+    background: var(--color-dusty-blue);
+    color: white;
+  }
+
+  .btn-blue:hover {
+    background: #6a8799;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     PAST EVENTS SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .past-events {
+    background: var(--color-cream);
+  }
+
+  .past-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .past-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .past-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .past-image {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+  }
+
+  .past-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  .past-image img.pos-top { object-position: top; }
+  .past-image img.pos-center { object-position: center; }
+  .past-image img.pos-bottom { object-position: bottom; }
+
+  .past-card:hover .past-image img {
+    transform: scale(1.05);
+  }
+
+  .past-body {
+    padding: var(--space-md);
+  }
+
+  .past-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    margin-bottom: var(--space-xs);
+  }
+
+  .past-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .past-body p {
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     CTA SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .cta-section {
+    position: relative;
+    background: var(--color-brown-dark);
+    padding: var(--space-3xl) 0;
+    overflow: hidden;
+  }
+
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .cta-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(196, 87, 59, 0.2), rgba(212, 161, 74, 0.1));
+  }
+
+  .cta-shape-1 {
+    width: 500px;
+    height: 500px;
+    top: -200px;
+    right: -100px;
+  }
+
+  .cta-shape-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    left: -50px;
+  }
+
+  .cta-content {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-icon img {
+    width: 64px;
+    height: 64px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cta-content p {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    max-width: 500px;
+    margin: 0 auto var(--space-lg);
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hero-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      display: none;
+    }
+
+    .activities-grid,
+    .events-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .past-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding-top: 120px;
+      padding-bottom: var(--space-xl);
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+
+    .mission-photos {
+      grid-template-columns: 1fr;
+      max-width: 350px;
+    }
+
+    .photo-1, .photo-2, .photo-3 {
+      transform: none;
+    }
+
+    .past-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

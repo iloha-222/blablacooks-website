@@ -1,0 +1,797 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Ateliers Couture - Blablacooks">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="label label-gold">Ateliers Couture</span>
+        <h1>Blablacouture</h1>
+        <p class="hero-subtitle">
+          Blablacooks et La Cimade lancent des ateliers d'initiation à la couture. Ces ateliers sont un espace pour se rencontrer entre cultures et pratiquer le français en situation réelle.
+        </p>
+        <a href="#prochain-atelier" class="btn btn-primary btn-gold">
+          Voir les ateliers en cours
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-image-frame">
+          <img src="/vrais-photos/Couture.png" alt="Atelier Blablacouture" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le Concept -->
+  <section class="section concept-section">
+    <div class="container">
+      <div class="section-header-spaced">
+        <span class="label label-gold">Notre approche</span>
+        <h2>Le Concept</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <div class="concept-card" data-animate>
+        <div class="concept-icon">
+          <img src="/icons/noun-sew-4331889.svg" alt="" />
+        </div>
+        <div class="concept-text">
+          <p>
+            Les ateliers Blablacouture sont un espace pour se rencontrer entre cultures et pratiquer le français en situation réelle pour les personnes en cours d'apprentissage du français.
+          </p>
+          <p>
+            En parlant avec d'autres autour d'un savoir-faire commun, vous apprendrez les bases de la couture tout en créant des liens interculturels.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment ça se passe -->
+  <section class="section infos-section">
+    <div class="container">
+      <div class="section-header-spaced">
+        <span class="label label-terracotta">Pratique</span>
+        <h2>Comment ça se passe ?</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <div class="infos-grid">
+        <!-- Infos pratiques -->
+        <div class="info-card" data-animate>
+          <div class="info-header">
+            <div class="info-icon info-icon-gold">
+              <img src="/icons/noun-location-8077585.svg" alt="" />
+            </div>
+            <h3>Infos pratiques</h3>
+          </div>
+          <ul class="info-list">
+            <li>
+              <img src="/icons/noun-location-8077585.svg" alt="" class="info-list-icon" />
+              <div>
+                <strong>Lieu :</strong>
+                <span>MPT Voltaire, 3 Square Jean Monnet</span>
+              </div>
+            </li>
+            <li>
+              <img src="/icons/horaire.svg" alt="" class="info-list-icon" />
+              <div>
+                <strong>Horaires :</strong>
+                <span>Vendredis, 9h à 12h</span>
+              </div>
+            </li>
+            <li>
+              <img src="/icons/noun-group-8132009.svg" alt="" class="info-list-icon" />
+              <div>
+                <strong>Groupe :</strong>
+                <span>6 participants (3 francophones + 3 apprenants)</span>
+              </div>
+            </li>
+            <li>
+              <img src="/icons/noun-cooking-step-5381425.svg" alt="" class="info-list-icon" />
+              <div>
+                <strong>Engagement :</strong>
+                <span>7 ateliers</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tarifs -->
+        <div class="info-card" data-animate>
+          <div class="info-header">
+            <div class="info-icon info-icon-blue">
+              <img src="/icons/tarifs.svg" alt="" />
+            </div>
+            <h3>Tarifs</h3>
+          </div>
+          <p class="tarif-intro">
+            Adhésion à régler aux Maisons Pour Tous pour l'année scolaire :
+          </p>
+          <div class="tarif-box">
+            <div class="tarif-row">
+              <span>Adultes</span>
+              <span class="tarif-price">7 €</span>
+            </div>
+            <div class="tarif-row">
+              <span>Adolescents</span>
+              <span class="tarif-price">3,50 €</span>
+            </div>
+          </div>
+          <p class="tarif-note">
+            Gratuit si vous avez déjà adhéré dans une Maison Pour Tous pour une autre activité.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Les Animatrices -->
+  <section class="section animatrices-section">
+    <div class="container">
+      <div class="section-header-spaced">
+        <span class="label label-gold">L'équipe</span>
+        <h2>Les Animatrices</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <div class="animatrices-grid">
+        <div class="animatrice-card" data-animate>
+          <div class="animatrice-avatar">
+            <img src="/perso-tabliers-bleus/3.webp" alt="" />
+          </div>
+          <h3>Irina Isakova</h3>
+          <p>Couturière passionnée</p>
+        </div>
+        <div class="animatrice-card" data-animate>
+          <div class="animatrice-avatar">
+            <img src="/perso-tabliers-bleus/5.webp" alt="" />
+          </div>
+          <h3>Irène Velay</h3>
+          <p>Couturière passionnée</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prochain Atelier -->
+  <section id="prochain-atelier" class="section atelier-section">
+    <div class="container">
+      <div class="section-header-spaced">
+        <span class="label label-white">Inscrivez-vous</span>
+        <h2>Ateliers en Cours</h2>
+        <p class="section-desc-white">Rejoignez-nous pour apprendre la couture</p>
+      </div>
+
+      <div class="atelier-card" data-animate>
+        <div class="atelier-image">
+          <img src="/vrais-photos/couture-atelier.png" alt="Ateliers Blablacouture" loading="lazy" />
+        </div>
+        <div class="atelier-content">
+          <div class="atelier-badges">
+            <span class="badge badge-gold">En cours</span>
+            <span class="badge-date">9 Janvier → 20 Février 2026</span>
+          </div>
+          <h3>Ateliers Blablacouture</h3>
+          <p>
+            Avec La Cimade, initiez-vous à la couture dans un espace de rencontre interculturelle. Animés par Irina Isakova et Irène Velay.
+          </p>
+          <div class="atelier-details">
+            <div class="atelier-detail">
+              <img src="/icons/horaire.svg" alt="" />
+              <span>Vendredis, 9h-12h</span>
+            </div>
+            <div class="atelier-detail">
+              <img src="/icons/noun-location-8077585.svg" alt="" />
+              <span>MPT Voltaire, 3 Square Jean Monnet</span>
+            </div>
+          </div>
+          <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-blablacouture-automne-2" target="_blank" class="btn btn-primary btn-gold btn-full">
+            S'inscrire sur HelloAsso
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment venir -->
+  <section class="section access-section">
+    <div class="container">
+      <div class="section-header-spaced">
+        <span class="label label-sage">Accès</span>
+        <h2>Comment venir ?</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <div class="map-card" data-animate>
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d3.8647!3d43.6048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af3c5c7d8e5d%3A0x8f9b7c6d5e4a3b2c!2s3%20Square%20Jean%20Monnet%2C%2034070%20Montpellier!5e0!3m2!1sfr!2sfr!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            title="MPT Voltaire">
+          </iframe>
+        </div>
+        <div class="map-info">
+          <div class="map-address">
+            <h3>MPT Voltaire</h3>
+            <p>3 Square Jean Monnet, 34070 Montpellier</p>
+          </div>
+          <div class="map-transport">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>Tram Ligne 3, arrêt Voltaire</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 50%, var(--color-sand) 100%);
+  }
+
+  .hero-bg .blob {
+    position: absolute;
+  }
+
+  .hero-bg .blob-1 {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -150px;
+    background: linear-gradient(135deg, rgba(212, 161, 74, 0.12), rgba(245, 182, 17, 0.06));
+    animation: blob-morph 20s ease-in-out infinite;
+  }
+
+  .hero-bg .blob-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    background: linear-gradient(135deg, rgba(143, 166, 134, 0.1), rgba(200, 212, 194, 0.05));
+    animation: blob-morph 25s ease-in-out infinite reverse;
+  }
+
+  .hero-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .hero-text {
+    max-width: 540px;
+  }
+
+  .hero-text h1 {
+    margin: var(--space-md) 0;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-elevated);
+    border: 6px solid white;
+    max-width: 480px;
+  }
+
+  .hero-image-frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Gold button variant */
+  .btn-gold {
+    background: var(--color-gold);
+    box-shadow: 0 4px 20px -4px rgba(212, 161, 74, 0.4);
+  }
+
+  .btn-gold:hover {
+    background: #c99a42;
+    box-shadow: 0 8px 30px -4px rgba(212, 161, 74, 0.5);
+  }
+
+  /* Section Header Spaced */
+  .section-header-spaced {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header-spaced .label {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-header-spaced h2 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-header-spaced .section-desc {
+    color: var(--color-brown);
+    opacity: 0.7;
+    margin-top: var(--space-xs);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-desc-white {
+    color: white;
+    opacity: 0.85;
+    margin-top: var(--space-xs);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .label-white {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  /* Concept Section */
+  .concept-section {
+    background: white;
+  }
+
+  .concept-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFFBF0 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    border: 1px solid rgba(212, 161, 74, 0.3);
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+  }
+
+  .concept-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-gold);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .concept-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+  }
+
+  .concept-text p {
+    font-size: 1.1rem;
+    color: var(--color-brown-dark);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    max-width: none;
+  }
+
+  .concept-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Infos Section */
+  .infos-section {
+    background: var(--color-cream-dark);
+  }
+
+  .infos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .info-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--color-sand);
+  }
+
+  .info-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  .info-icon-gold {
+    background: var(--color-gold);
+  }
+
+  .info-icon-blue {
+    background: var(--color-dusty-blue);
+  }
+
+  .info-header h3 {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .info-list {
+    list-style: none;
+  }
+
+  .info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .info-list-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
+  }
+
+  .info-list strong {
+    color: var(--color-brown-dark);
+  }
+
+  .info-list span {
+    color: var(--color-brown);
+    opacity: 0.7;
+  }
+
+  .tarif-intro {
+    color: var(--color-brown);
+    opacity: 0.7;
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+  }
+
+  .tarif-box {
+    background: var(--color-cream-dark);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .tarif-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .tarif-row:first-child {
+    border-bottom: 1px solid var(--color-sand);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tarif-price {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--color-terracotta);
+  }
+
+  .tarif-note {
+    font-size: 0.85rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+  }
+
+  /* Animatrices Section */
+  .animatrices-section {
+    background: white;
+  }
+
+  .animatrices-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .animatrice-card {
+    text-align: center;
+  }
+
+  .animatrice-avatar {
+    width: 120px;
+    height: 120px;
+    background: rgba(212, 161, 74, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+  }
+
+  .animatrice-avatar img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .animatrice-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .animatrice-card p {
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+  }
+
+  /* Atelier Section */
+  .atelier-section {
+    background: var(--color-gold);
+  }
+
+  .atelier-section h2 {
+    color: white;
+  }
+
+  .atelier-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .atelier-image {
+    aspect-ratio: 2/1;
+    overflow: hidden;
+  }
+
+  .atelier-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .atelier-content {
+    padding: var(--space-lg);
+  }
+
+  .atelier-badges {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-gold {
+    background: var(--color-gold);
+    color: white;
+  }
+
+  .badge-date {
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+  }
+
+  .atelier-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .atelier-content > p {
+    color: var(--color-brown);
+    opacity: 0.7;
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .atelier-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .atelier-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+  }
+
+  .atelier-detail img {
+    width: 18px;
+    height: 18px;
+    filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
+  }
+
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Access Section */
+  .access-section {
+    background: white;
+  }
+
+  .map-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--color-cream-dark);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-sand);
+  }
+
+  .map-frame {
+    aspect-ratio: 2/1;
+  }
+
+  .map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .map-info {
+    padding: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .map-address h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .map-address p {
+    color: var(--color-brown);
+    opacity: 0.7;
+    font-size: 0.95rem;
+  }
+
+  .map-transport {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+  }
+
+  .map-transport svg {
+    color: var(--color-terracotta);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: var(--space-xl);
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .infos-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .concept-card {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: 100px 0 var(--space-xl);
+    }
+
+    .hero-image-frame {
+      max-width: 320px;
+    }
+
+    .concept-card {
+      padding: var(--space-md);
+    }
+
+    .atelier-content {
+      padding: var(--space-md);
+    }
+
+    .map-info {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

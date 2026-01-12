@@ -1,0 +1,1016 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Ateliers Cuisine - Blablacooks">
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="page-hero-grid">
+        <div class="page-hero-content">
+          <span class="label label-terracotta">Ateliers Cuisine</span>
+          <h1>Enfilez vos tabliers !</h1>
+          <p class="page-hero-desc">
+            Blablacooks vous propose des ateliers de cuisine participative avec des cuistots du monde entier. Découvrez de nouvelles saveurs, rencontrez des personnes passionnantes et partagez un repas convivial.
+          </p>
+          <a href="#prochain-atelier" class="btn btn-primary">
+            Voir le prochain atelier
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="page-hero-image">
+          <img src="/vrais-photos/atelier de cuisine.png" alt="Atelier de cuisine Blablacooks" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       COMMENT CA SE PASSE
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="how-it-works section">
+    <div class="container">
+      <div class="section-header section-header-spaced" data-animate>
+        <span class="label label-gold">Le déroulement</span>
+        <h2>Comment ça se passe ?</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card" data-animate>
+          <div class="step-icon">
+            <img src="/icons/noun-cooking-pot-6972194.svg" alt="" />
+          </div>
+          <div class="step-number">1</div>
+          <h3>Préparation & Cuisson</h3>
+          <p>Pendant 2 heures, vous apprenez à réaliser une recette venue d'ailleurs, guidé par un.e cuistot passionné.e.</p>
+        </div>
+
+        <div class="step-card" data-animate>
+          <div class="step-icon">
+            <img src="/icons/noun-dining-6972190.svg" alt="" />
+          </div>
+          <div class="step-number">2</div>
+          <h3>Repas partagé</h3>
+          <p>On déguste ensemble ce qu'on a préparé. C'est le moment d'échanger, de discuter et de faire connaissance.</p>
+        </div>
+
+        <div class="step-card" data-animate>
+          <div class="step-icon">
+            <img src="/icons/rangement-convivial.svg" alt="" />
+          </div>
+          <div class="step-number">3</div>
+          <h3>Rangement convivial</h3>
+          <p>Vaisselle et rangement ensemble, dans la bonne humeur. L'atelier dure environ 3 heures au total.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CE QUE VOUS ALLEZ VIVRE
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="experience section-lg">
+    <div class="experience-bg"></div>
+    <div class="container">
+      <div class="section-header section-header-spaced" data-animate>
+        <span class="label label-sage">L'expérience</span>
+        <h2>Ce que vous allez vivre</h2>
+      </div>
+
+      <div class="experience-grid">
+        <!-- Pour les participants -->
+        <div class="experience-card" data-animate>
+          <div class="experience-header">
+            <img src="/perso-tabliers-bleus/2.webp" alt="" class="experience-avatar" />
+            <h3>Pour vous, participants</h3>
+          </div>
+          <ul class="experience-list">
+            <li>
+              <span class="check check-terracotta"></span>
+              Découvrir une autre culture à travers sa cuisine
+            </li>
+            <li>
+              <span class="check check-terracotta"></span>
+              Apprendre à réaliser une nouvelle recette venue d'un des 5 continents
+            </li>
+            <li>
+              <span class="check check-terracotta"></span>
+              Participer à l'accueil d'un.e nouvel.le arrivant.e en France
+            </li>
+            <li>
+              <span class="check check-terracotta"></span>
+              Partager un moment convivial et enrichissant
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pour les cuistots -->
+        <div class="experience-card" data-animate>
+          <div class="experience-header">
+            <img src="/perso-nationalites/Syrienne.webp" alt="" class="experience-avatar" />
+            <h3>Pour les cuistots</h3>
+          </div>
+          <ul class="experience-list">
+            <li>
+              <span class="check check-gold"></span>
+              Trouver un espace pour pratiquer le français et gagner en confiance
+            </li>
+            <li>
+              <span class="check check-gold"></span>
+              Partager et valoriser sa culture à travers la transmission d'un savoir-faire culinaire
+            </li>
+            <li>
+              <span class="check check-gold"></span>
+              Rencontrer des Héraultais et créer des liens
+            </li>
+            <li>
+              <span class="check check-gold"></span>
+              Être rémunéré.e sous forme de chèque emploi associatif
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PENSEZ A APPORTER
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="bring section">
+    <div class="container">
+      <div class="bring-card" data-animate>
+        <div class="bring-icon">
+          <img src="/perso-tabliers-bleus/4.webp" alt="" />
+        </div>
+        <div class="bring-content">
+          <h3>Pensez à apporter</h3>
+          <div class="bring-items">
+            <div class="bring-item">
+              <img src="/icons/noun-recipe-book-5037133.svg" alt="" />
+              <span>Un carnet pour noter la recette</span>
+            </div>
+            <div class="bring-item">
+              <img src="/icons/noun-scrunchie-1841573.svg" alt="" />
+              <span>Un élastique (cheveux longs)</span>
+            </div>
+            <div class="bring-item">
+              <img src="/icons/chaussures-fermees.svg" alt="" />
+              <span>Des chaussures fermées</span>
+            </div>
+            <div class="bring-item">
+              <img src="/icons/noun-tupperware-5257278.svg" alt="" />
+              <span>Un tupperware pour les restes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PROCHAIN ATELIER
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="prochain-atelier" class="next-workshop">
+    <div class="container">
+      <div class="section-header section-header-light section-header-spaced" data-animate>
+        <span class="label label-gold">Prochainement</span>
+        <h2>Prochain Atelier Cuisine</h2>
+        <p class="section-desc">Rejoignez-nous pour une nouvelle aventure culinaire</p>
+      </div>
+
+      <div class="featured-event" data-animate>
+        <div class="featured-event-image">
+          <img src="/vrais-photos/brunch camerounais.png" alt="Brunch Camerounais" />
+        </div>
+        <div class="featured-event-content">
+          <div class="featured-event-meta">
+            <span class="event-badge">Cuisine</span>
+            <span class="event-date-text">8 Février 2026 - 10h45 à 14h</span>
+          </div>
+          <h3>Brunch Camerounais</h3>
+          <p>Beignets de haricots croustillants et bouillie crémeuse, une tradition matinale d'Afrique de l'Ouest. Animé par Adèle Nguelefack.</p>
+          <div class="featured-event-tags">
+            <span>végétarien</span>
+            <span>sans gluten</span>
+          </div>
+          <div class="featured-event-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Halle Tropisme, 121 Rue Fontcouverte, Montpellier
+          </div>
+          <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-brunch-camerounais" target="_blank" class="btn btn-primary btn-large">
+            S'inscrire sur HelloAsso
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HISTORIQUE DES ATELIERS
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="past-workshops section-lg">
+    <div class="container">
+      <div class="section-header section-header-spaced" data-animate>
+        <span class="label label-sage">Retour en images</span>
+        <h2>Nos Ateliers Passés</h2>
+        <p class="section-desc">Découvrez les saveurs que nous avons explorées ensemble</p>
+      </div>
+
+      <div class="workshops-grid">
+        <!-- Afghanistan -->
+        <article class="workshop-card" data-animate>
+          <div class="workshop-image">
+            <img src="/vrais-photos/Evenement-noel.jpg" alt="Brunch de fête afghan" />
+          </div>
+          <div class="workshop-content">
+            <span class="workshop-date">7 Décembre 2025</span>
+            <h3>Brunch de Fête Afghan</h3>
+            <p>Fawzia Rahmani - Mantus et ferni</p>
+          </div>
+        </article>
+
+        <!-- Ukraine/Géorgie -->
+        <article class="workshop-card" data-animate>
+          <div class="workshop-image">
+            <img src="/vrais-photos/atelier ukrainien passé2.jpeg" alt="Festin ukrainien" />
+          </div>
+          <div class="workshop-content">
+            <span class="workshop-date">12 Octobre 2025</span>
+            <h3>Festin Ukrainien et Géorgien</h3>
+            <p>Natalia Bieliakova</p>
+          </div>
+        </article>
+
+        <!-- Cameroun -->
+        <article class="workshop-card" data-animate>
+          <div class="workshop-image">
+            <img src="/vrais-photos/atelier-camerounais.jpg" alt="Cuisine camerounaise" />
+          </div>
+          <div class="workshop-content">
+            <span class="workshop-date">21 Septembre 2025</span>
+            <h3>Cuisine Camerounaise</h3>
+            <p>Yaya Ngouowoud - Poulet DG</p>
+          </div>
+        </article>
+
+        <!-- Brésil -->
+        <article class="workshop-card" data-animate>
+          <div class="workshop-image">
+            <img src="/vrais-photos/atelier-bresilien.jpg" alt="Cuisine brésilienne" />
+          </div>
+          <div class="workshop-content">
+            <span class="workshop-date">18 Mai 2025</span>
+            <h3>Cuisine Brésilienne</h3>
+            <p>Eloa Sena - Moqueca</p>
+          </div>
+        </article>
+
+        <!-- Turquie -->
+        <article class="workshop-card" data-animate>
+          <div class="workshop-image">
+            <img src="/vrais-photos/atelier-turc.jpg" alt="Menu de thé turc" />
+          </div>
+          <div class="workshop-content">
+            <span class="workshop-date">13 Avril 2025</span>
+            <h3>Menu de Thé Turc</h3>
+            <p>Hilal Alam</p>
+          </div>
+        </article>
+
+        <!-- Caraïbes -->
+        <article class="workshop-card" data-animate>
+          <div class="workshop-image">
+            <img src="/vrais-photos/atelier-caraibes.jpg" alt="Cuisine des Caraïbes" />
+          </div>
+          <div class="workshop-content">
+            <span class="workshop-date">23 Mars 2025</span>
+            <h3>Cuisine des Caraïbes</h3>
+            <p>Anaïs - Bokits</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       DEVENIR CUISTOT
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="become-cook section">
+    <div class="become-cook-bg"></div>
+    <div class="container">
+      <div class="become-cook-grid">
+        <div class="become-cook-content" data-animate>
+          <span class="label label-gold">Appel à cuisiniers</span>
+          <h2>Devenir cuistot Blablacooks</h2>
+          <p class="become-cook-intro">
+            Vous venez d'une autre culture ? Vous êtes installé.e en France, à Montpellier depuis quelques temps ? Vous souhaitez partager votre culture d'origine en transmettant un plat de votre pays que vous aimez cuisiner ?
+          </p>
+
+          <ul class="become-cook-list">
+            <li>
+              <span class="check check-blue"></span>
+              <div>
+                <strong>Prérequis :</strong> Niveau de français A1 minimum + situation légale de travail
+              </div>
+            </li>
+            <li>
+              <span class="check check-blue"></span>
+              <div>
+                <strong>Rémunération :</strong> 5 heures au SMIC (courses, atelier, repas, rangement)
+              </div>
+            </li>
+            <li>
+              <span class="check check-blue"></span>
+              <div>
+                <strong>Accompagnement :</strong> 3 demi-journées de formation avant l'atelier
+              </div>
+            </li>
+            <li>
+              <span class="check check-blue"></span>
+              <div>
+                <strong>Ingrédients :</strong> Pris en charge par l'association
+              </div>
+            </li>
+          </ul>
+
+          <a href="mailto:blablacooks@gmail.com" class="btn btn-gold">
+            Nous contacter
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="become-cook-visual" data-animate>
+          <div class="cook-characters">
+            <img src="/perso-nationalites/Congolaise.webp" alt="" class="cook-char cook-char-1" />
+            <img src="/perso-nationalites/Senegalais.webp" alt="" class="cook-char cook-char-2" />
+            <img src="/perso-nationalites/Marocaine.webp" alt="" class="cook-char cook-char-3" />
+            <img src="/perso-nationalites/Grec.webp" alt="" class="cook-char cook-char-4" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════════
+     SECTION HEADERS
+  ═══════════════════════════════════════════════════════════════════ */
+  .section-header-spaced {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header-spaced .label {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-header-spaced h2 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-header-spaced .section-desc {
+    color: var(--color-brown);
+    opacity: 0.7;
+    margin-top: var(--space-xs);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-header-light h2 {
+    color: white;
+  }
+
+  .section-header-light .section-desc {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     PAGE HERO
+  ═══════════════════════════════════════════════════════════════════ */
+  .page-hero {
+    position: relative;
+    padding: calc(100px + var(--space-xl)) 0 var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .page-hero-bg .blob-1 {
+    width: 500px;
+    height: 500px;
+    top: -150px;
+    right: -150px;
+  }
+
+  .page-hero-bg .blob-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -100px;
+  }
+
+  .page-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .page-hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-hero-content h1 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .page-hero-desc {
+    font-size: 1.2rem;
+    color: var(--color-brown);
+    margin-bottom: var(--space-lg);
+    max-width: 500px;
+  }
+
+  .page-hero-image {
+    position: relative;
+  }
+
+  .page-hero-image img {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     HOW IT WORKS
+  ═══════════════════════════════════════════════════════════════════ */
+  .how-it-works {
+    background: white;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .step-card {
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .step-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--color-cream-dark);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+  }
+
+  .step-icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(95%) saturate(904%) hue-rotate(342deg) brightness(94%) contrast(87%);
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--color-terracotta);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0 auto var(--space-sm);
+  }
+
+  .step-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .step-card p {
+    color: var(--color-brown);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     EXPERIENCE SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .experience {
+    position: relative;
+    background: var(--color-cream-dark);
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .experience-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .experience-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .experience-avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .experience-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .experience-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .experience-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+  }
+
+  .check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .check::after {
+    content: '';
+    width: 10px;
+    height: 6px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg) translateY(-1px);
+  }
+
+  .check-terracotta { background: var(--color-terracotta); }
+  .check-gold { background: var(--color-gold); }
+  .check-blue { background: var(--color-dusty-blue); }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     BRING SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .bring {
+    background: white;
+  }
+
+  .bring-card {
+    background: var(--color-cream-dark);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .bring-icon img {
+    width: 120px;
+    height: auto;
+  }
+
+  .bring-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .bring-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .bring-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+  }
+
+  .bring-item img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(95%) saturate(904%) hue-rotate(342deg) brightness(94%) contrast(87%);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     NEXT WORKSHOP
+  ═══════════════════════════════════════════════════════════════════ */
+  .next-workshop {
+    background: var(--color-terracotta);
+    padding: var(--space-2xl) 0;
+  }
+
+  .next-workshop h2 {
+    color: white;
+  }
+
+  .next-workshop .section-desc {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .featured-event {
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .featured-event-image {
+    overflow: hidden;
+  }
+
+  .featured-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-event-content {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .featured-event-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .event-badge {
+    background: var(--color-terracotta);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .event-date-text {
+    font-size: 0.85rem;
+    color: var(--color-taupe);
+  }
+
+  .featured-event-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .featured-event-content > p {
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .featured-event-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .featured-event-tags span {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    background: var(--color-sage-light);
+    color: var(--color-sage);
+    border-radius: var(--radius-full);
+    font-weight: 500;
+  }
+
+  .featured-event-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-taupe);
+    margin-bottom: var(--space-md);
+  }
+
+  .featured-event-location svg {
+    flex-shrink: 0;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    margin-top: auto;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     PAST WORKSHOPS
+  ═══════════════════════════════════════════════════════════════════ */
+  .past-workshops {
+    background: var(--color-cream);
+  }
+
+  .workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .workshop-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .workshop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .workshop-image {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+  }
+
+  .workshop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  .workshop-card:hover .workshop-image img {
+    transform: scale(1.05);
+  }
+
+  .workshop-content {
+    padding: var(--space-sm);
+  }
+
+  .workshop-date {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .workshop-content h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .workshop-content p {
+    font-size: 0.8rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     BECOME COOK
+  ═══════════════════════════════════════════════════════════════════ */
+  .become-cook {
+    position: relative;
+    background: var(--color-cream-dark);
+  }
+
+  .become-cook-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .become-cook-content h2 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .become-cook-intro {
+    font-size: 1.05rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+    margin-bottom: var(--space-lg);
+    line-height: 1.7;
+  }
+
+  .become-cook-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .become-cook-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.85;
+  }
+
+  .become-cook-list strong {
+    color: var(--color-brown-dark);
+  }
+
+  .btn-gold {
+    background: var(--color-gold);
+    color: white;
+    box-shadow: 0 4px 20px -4px rgba(212, 161, 74, 0.4);
+  }
+
+  .btn-gold:hover {
+    background: #c4941f;
+    transform: translateY(-3px);
+  }
+
+  .become-cook-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cook-characters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .cook-char {
+    width: 140px;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(92, 74, 61, 0.15));
+    transition: transform 0.4s var(--ease-out-expo);
+  }
+
+  .cook-char:hover {
+    transform: scale(1.1) translateY(-5px);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .page-hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .page-hero-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .page-hero-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-hero-image {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+    }
+
+    .experience-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-event {
+      grid-template-columns: 1fr;
+    }
+
+    .workshops-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    .become-cook-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .become-cook-intro {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .become-cook-list {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .become-cook-visual {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bring-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .bring-items {
+      grid-template-columns: 1fr;
+    }
+
+    .workshops-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .cook-characters {
+      gap: var(--space-sm);
+    }
+
+    .cook-char {
+      width: 100px;
+    }
+  }
+</style>

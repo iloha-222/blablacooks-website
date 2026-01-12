@@ -1,0 +1,1118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+// Données des bonnes adresses
+const bonnesAdresses = [
+  {
+    title: "Tiflis",
+    country: "Géorgie",
+    type: "Bonne Adresse",
+    image: "/vrais-photos/restaurant-georgien-tiflis.jpg",
+    description: "Accueil chaleureux où les serveurs expliquent avec passion le menu et comment déguster certains plats. Cuisine géorgienne authentique avec khachapuri, soupes traditionnelles et grillades.",
+    address: "2 Place de Strasbourg, 34000 Montpellier",
+    phone: "09 53 37 64 72",
+    website: "https://www.instagram.com/tiflis.mtp/",
+    horaires: "Ouvert dès 12h"
+  },
+  {
+    title: "Yakamoz",
+    country: "Turquie",
+    type: "Bonne Adresse",
+    image: "/vrais-photos/yakamoz.jpeg",
+    description: "Découvrez les saveurs méditerranéennes alliant Turquie, Liban et Grèce. Décor authentique et moderne où se mêlent les couleurs chaudes de la Méditerranée.",
+    address: "14 Place du Nombre d'Or, 34000 Montpellier",
+    phone: "07 85 56 96 45",
+    website: "https://www.instagram.com/yakamoz_montpellier/",
+    horaires: "7j/7 de 7h à 23h"
+  },
+  {
+    title: "Épicerie Arménie",
+    country: "Arménie",
+    type: "Bonne Adresse",
+    image: "/vrais-photos/epicerie-armenie-montpellier-149241035126.jpg",
+    description: "Spécialités arméniennes, géorgiennes, russes et roumaines. Découvrez l'Ararat (célèbre brandy arménien), soudjouk, caviar, halva et une avalanche de loukoums.",
+    address: "5 Rue Anatole France, 34000 Montpellier",
+    phone: "09 84 48 18 48",
+    website: "",
+    horaires: "Lun-Sam: 10h-22h"
+  }
+];
+
+// Données des recettes (à remplir plus tard)
+const recettes = [];
+
+// Combiner toutes les données
+const allItems = [...bonnesAdresses, ...recettes];
+const allCountries = [...new Set(allItems.map(item => item.country))].sort();
+---
+
+<Layout title="Recettes & Bonnes Adresses - Blablacooks">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-content" data-animate>
+        <span class="label label-terracotta">Partage & Découverte</span>
+        <h1>Recettes & Bonnes Adresses</h1>
+        <p class="hero-desc">
+          Découvrez les trésors culinaires de nos adhérents : recettes traditionnelles
+          partagées lors de nos ateliers et bonnes adresses pour voyager gustativement à Montpellier.
+        </p>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-wrapper" data-animate>
+        <!-- Type Filters -->
+        <div class="filter-group">
+          <span class="filter-label">Filtrer par :</span>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+              </svg>
+              Tout
+            </button>
+            <button class="filter-btn" data-filter="Recette">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                <line x1="8" y1="7" x2="16" y2="7"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+              Recettes
+            </button>
+            <button class="filter-btn" data-filter="Bonne Adresse">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Bonnes Adresses
+            </button>
+          </div>
+        </div>
+
+        <!-- Country Filter -->
+        <div class="filter-group">
+          <div class="country-dropdown">
+            <button class="dropdown-btn" id="countryDropdownBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="dropdown-text">Tous les pays</span>
+              <svg class="dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu" id="countryDropdownMenu">
+              <button class="dropdown-item active" data-country="all">Tous les pays</button>
+              {allCountries.map(country => (
+                <button class="dropdown-item" data-country={country}>{country}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Grid -->
+  <section class="cards-section">
+    <div class="container">
+      <div class="cards-grid">
+        <!-- Bonnes Adresses Cards -->
+        {bonnesAdresses.map((item, index) => (
+          <article class="item-card card-adresse" data-type={item.type} data-country={item.country} data-animate>
+            <div class="card-image">
+              <img src={item.image} alt={item.title} />
+              <div class="card-badges">
+                <span class="badge badge-type badge-adresse">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Bonne Adresse
+                </span>
+                <span class="badge badge-country">{item.country}</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>{item.title}</h3>
+              <p class="card-desc">{item.description}</p>
+              <div class="card-details">
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>{item.address}</span>
+                </div>
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>{item.phone}</span>
+                </div>
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span>{item.horaires}</span>
+                </div>
+                {item.website && (
+                  <a href={item.website} target="_blank" rel="noopener" class="detail-item detail-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                    <span>Voir sur Instagram</span>
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))}
+
+        <!-- Recipe Cards -->
+        {recettes.map((item, index) => (
+          <article
+            class="item-card card-recette recipe-trigger"
+            data-type={item.type}
+            data-country={item.country}
+            data-title={item.title}
+            data-animate
+          >
+            <div class="card-image">
+              <img src={item.image} alt={item.title} />
+              <div class="card-badges">
+                <span class="badge badge-type badge-recette">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                  Recette
+                </span>
+                <span class="badge badge-country">{item.country}</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>{item.title}</h3>
+              <p class="card-desc">{item.excerpt}</p>
+              <div class="recipe-meta">
+                <span class="meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  {item.temps}
+                </span>
+                <span class="meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                  {item.personnes}
+                </span>
+              </div>
+              <button class="btn-voir-recette">
+                Voir la recette
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <h3>Aucun résultat</h3>
+        <p>Essayez de modifier vos filtres pour trouver ce que vous cherchez.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Modal -->
+  <div class="modal-overlay" id="recipeModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-wrapper">
+          <h2 id="modalTitle">Titre de la recette</h2>
+          <span class="badge badge-country" id="modalCountry">Pays</span>
+        </div>
+        <div class="modal-meta" id="modalMeta">
+          <span class="meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span id="modalTemps">Temps</span>
+          </span>
+          <span class="meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+            </svg>
+            <span id="modalPersonnes">Personnes</span>
+          </span>
+        </div>
+        <button class="modal-close" id="modalClose">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalImage" src="" alt="" />
+        </div>
+        <div class="modal-recipe-content">
+          <div class="recipe-section">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                <rect x="9" y="3" width="6" height="4" rx="2"/>
+              </svg>
+              Ingrédients
+            </h4>
+            <ul class="ingredients-list" id="modalIngredients">
+            </ul>
+          </div>
+          <div class="recipe-section">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"/>
+                <line x1="8" y1="12" x2="21" y2="12"/>
+                <line x1="8" y1="18" x2="21" y2="18"/>
+                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                <line x1="3" y1="18" x2="3.01" y2="18"/>
+              </svg>
+              Préparation
+            </h4>
+            <ol class="instructions-list" id="modalInstructions">
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--space-3xl) + 80px) 0 var(--space-xl);
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-content h1 {
+    margin: var(--space-md) 0;
+  }
+
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+  }
+
+  .hero-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero-decoration .blob-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+  }
+
+  .hero-decoration .blob-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: 10%;
+  }
+
+  /* Filters Section */
+  .filters-section {
+    padding: var(--space-md) 0 var(--space-lg);
+  }
+
+  .filters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .filter-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-brown);
+    opacity: 0.7;
+  }
+
+  .filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-brown);
+    background: var(--color-cream);
+    border: 2px solid var(--color-sand);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-terracotta-light);
+    color: var(--color-terracotta);
+  }
+
+  .filter-btn.active {
+    background: var(--color-terracotta);
+    border-color: var(--color-terracotta);
+    color: white;
+  }
+
+  .filter-btn svg {
+    transition: transform 0.3s ease;
+  }
+
+  .filter-btn:hover svg {
+    transform: scale(1.1);
+  }
+
+  /* Country Dropdown */
+  .country-dropdown {
+    position: relative;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-brown);
+    background: var(--color-cream);
+    border: 2px solid var(--color-sand);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+    min-width: 180px;
+  }
+
+  .dropdown-btn:hover {
+    border-color: var(--color-gold);
+  }
+
+  .dropdown-btn.active {
+    border-color: var(--color-gold);
+    background: rgba(212, 161, 74, 0.1);
+  }
+
+  .dropdown-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-btn.open .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-elevated);
+    padding: 0.5rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s var(--ease-out-expo);
+  }
+
+  .dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+  }
+
+  .dropdown-item:hover {
+    background: var(--color-cream);
+  }
+
+  .dropdown-item.active {
+    background: rgba(212, 161, 74, 0.15);
+    color: var(--color-gold);
+    font-weight: 600;
+  }
+
+  /* Cards Section */
+  .cards-section {
+    padding: var(--space-lg) 0 var(--space-2xl);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Item Cards */
+  .item-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.5s var(--ease-out-expo);
+  }
+
+  .item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .card-image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+
+  .item-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .card-badges {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+  }
+
+  .badge-type {
+    background: white;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .badge-recette {
+    color: var(--color-terracotta);
+  }
+
+  .badge-adresse {
+    color: var(--color-sage);
+  }
+
+  .badge-country {
+    background: var(--color-gold);
+    color: white;
+  }
+
+  .card-content {
+    padding: var(--space-md);
+  }
+
+  .card-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+    color: var(--color-brown);
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Bonne Adresse Card Details */
+  .card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-sand);
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+  }
+
+  .detail-item svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--color-sage);
+  }
+
+  .detail-link {
+    color: var(--color-terracotta);
+    font-weight: 500;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .detail-link:hover {
+    gap: 0.8rem;
+  }
+
+  .detail-link svg {
+    color: var(--color-terracotta);
+  }
+
+  /* Recipe Card */
+  .card-recette {
+    cursor: pointer;
+  }
+
+  .recipe-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--color-brown);
+    opacity: 0.7;
+  }
+
+  .meta-item svg {
+    color: var(--color-terracotta-light);
+  }
+
+  .btn-voir-recette {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    background: rgba(196, 87, 59, 0.1);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+  }
+
+  .btn-voir-recette:hover {
+    background: var(--color-terracotta);
+    color: white;
+  }
+
+  .btn-voir-recette svg {
+    transition: transform 0.3s ease;
+  }
+
+  .btn-voir-recette:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-md);
+    color: var(--color-brown);
+  }
+
+  .empty-state svg {
+    color: var(--color-taupe);
+    margin-bottom: var(--space-md);
+  }
+
+  .empty-state h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .empty-state p {
+    opacity: 0.7;
+    margin: 0 auto;
+  }
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(61, 48, 41, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+  }
+
+  .modal-overlay.open {
+    display: flex;
+  }
+
+  .modal-content {
+    background: white;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: modal-in 0.4s var(--ease-out-expo);
+  }
+
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .modal-header {
+    position: relative;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-cream);
+    border-bottom: 1px solid var(--color-sand);
+  }
+
+  .modal-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    padding-right: 50px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-meta {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xs);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .modal-close:hover {
+    background: var(--color-terracotta);
+    color: white;
+    transform: rotate(90deg);
+  }
+
+  .modal-body {
+    overflow-y: auto;
+    padding: var(--space-lg);
+  }
+
+  .modal-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-lg);
+    aspect-ratio: 16 / 9;
+  }
+
+  .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .modal-recipe-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-lg);
+  }
+
+  .recipe-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-brown-dark);
+    margin-bottom: var(--space-sm);
+  }
+
+  .recipe-section h4 svg {
+    color: var(--color-terracotta);
+  }
+
+  .ingredients-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .ingredients-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    background: var(--color-cream);
+    border-radius: var(--radius-sm);
+  }
+
+  .ingredients-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--color-gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .instructions-list {
+    list-style: none;
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .instructions-list li {
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .instructions-list li::before {
+    counter-increment: step;
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--color-terracotta);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-recipe-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: calc(var(--space-2xl) + 80px) 0 var(--space-lg);
+    }
+
+    .filters-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      padding: var(--space-sm);
+    }
+
+    .filter-group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .filter-buttons {
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+      max-height: 95vh;
+    }
+
+    .modal-header {
+      padding: var(--space-sm) var(--space-md);
+    }
+
+    .modal-body {
+      padding: var(--space-md);
+    }
+  }
+</style>
+
+<script define:vars={{ recettes }}>
+  // Filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const countryDropdownBtn = document.getElementById('countryDropdownBtn');
+  const countryDropdownMenu = document.getElementById('countryDropdownMenu');
+  const countryItems = document.querySelectorAll('.dropdown-item');
+  const itemCards = document.querySelectorAll('.item-card');
+  const emptyState = document.getElementById('emptyState');
+  const cardsGrid = document.querySelector('.cards-grid');
+
+  let activeTypeFilter = 'all';
+  let activeCountryFilter = 'all';
+
+  function applyFilters() {
+    let visibleCount = 0;
+
+    itemCards.forEach(card => {
+      const type = card.getAttribute('data-type');
+      const country = card.getAttribute('data-country');
+
+      let showCard = true;
+
+      if (activeTypeFilter !== 'all' && type !== activeTypeFilter) {
+        showCard = false;
+      }
+
+      if (activeCountryFilter !== 'all' && country !== activeCountryFilter) {
+        showCard = false;
+      }
+
+      card.style.display = showCard ? 'block' : 'none';
+      if (showCard) visibleCount++;
+    });
+
+    // Show/hide empty state
+    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    cardsGrid.style.display = visibleCount === 0 ? 'none' : 'grid';
+  }
+
+  // Type filter buttons
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeTypeFilter = btn.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+
+  // Country dropdown
+  countryDropdownBtn.addEventListener('click', () => {
+    countryDropdownBtn.classList.toggle('open');
+    countryDropdownMenu.classList.toggle('open');
+  });
+
+  countryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      countryItems.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+
+      const country = item.getAttribute('data-country');
+      activeCountryFilter = country;
+
+      const dropdownText = countryDropdownBtn.querySelector('.dropdown-text');
+      dropdownText.textContent = country === 'all' ? 'Tous les pays' : country;
+
+      if (country !== 'all') {
+        countryDropdownBtn.classList.add('active');
+      } else {
+        countryDropdownBtn.classList.remove('active');
+      }
+
+      countryDropdownBtn.classList.remove('open');
+      countryDropdownMenu.classList.remove('open');
+
+      applyFilters();
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!countryDropdownBtn.contains(e.target) && !countryDropdownMenu.contains(e.target)) {
+      countryDropdownBtn.classList.remove('open');
+      countryDropdownMenu.classList.remove('open');
+    }
+  });
+
+  // Recipe Modal
+  const modal = document.getElementById('recipeModal');
+  const modalClose = document.getElementById('modalClose');
+  const recipeTriggers = document.querySelectorAll('.recipe-trigger');
+
+  function openModal(recipeTitle) {
+    const recipe = recettes.find(r => r.title === recipeTitle);
+    if (!recipe) return;
+
+    document.getElementById('modalTitle').textContent = recipe.title;
+    document.getElementById('modalCountry').textContent = recipe.country;
+    document.getElementById('modalTemps').textContent = recipe.temps;
+    document.getElementById('modalPersonnes').textContent = recipe.personnes;
+    document.getElementById('modalImage').src = recipe.image;
+    document.getElementById('modalImage').alt = recipe.title;
+
+    const ingredientsList = document.getElementById('modalIngredients');
+    ingredientsList.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
+
+    const instructionsList = document.getElementById('modalInstructions');
+    instructionsList.innerHTML = recipe.instructions.map(inst => `<li><span>${inst}</span></li>`).join('');
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  recipeTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const title = trigger.getAttribute('data-title');
+      openModal(title);
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+</script>
