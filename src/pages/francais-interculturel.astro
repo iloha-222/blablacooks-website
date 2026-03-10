@@ -50,12 +50,15 @@ import '../styles/global.css';
         <div class="concept-icon">
           <img src="/icons/noun-talk-7544702.svg" alt="" />
         </div>
+        <div class="concept-character">
+          <img src="/perso-nationalites/interculturel.png" alt="" />
+        </div>
         <div class="concept-text">
           <p>
-            Les ateliers linguistiques Blablacooks sont conçus pour les personnes en cours d'apprentissage du français (niveau A1). Ils permettent de pratiquer la communication pour la vie quotidienne dans un cadre bienveillant et interculturel.
+            Les ateliers linguistiques Blablacooks sont conçus pour les personnes en cours d'apprentissage du français (niveau A1). Ils permettent de pratiquer le français pour la vie quotidienne dans un cadre bienveillant et interculturel.
           </p>
           <p>
-            Chaque atelier est une occasion de rencontrer d'autres personnes, de partager des expériences et de progresser ensemble en français.
+            Chaque atelier est une occasion de progresser ensemble en français.
           </p>
         </div>
       </div>
@@ -92,7 +95,7 @@ import '../styles/global.css';
               <img src="/icons/horaire.svg" alt="" class="info-list-icon" />
               <div>
                 <strong>Horaires :</strong>
-                <span>Mardis, 14h à 15h30</span>
+                <span>Mardis, 14h à 16h30</span>
               </div>
             </li>
             <li>
@@ -136,6 +139,15 @@ import '../styles/global.css';
           <p class="tarif-note">
             Gratuit si vous avez déjà adhéré dans une Maison Pour Tous pour une autre activité.
           </p>
+          <div class="tarif-box tarif-box-extra">
+            <div class="tarif-row">
+              <span>Adhésion Blablacooks + participation symbolique</span>
+              <span class="tarif-price">10 €</span>
+            </div>
+          </div>
+          <p class="tarif-note">
+            Jusqu'à la fin de l'année scolaire — non remboursable.
+          </p>
         </div>
       </div>
     </div>
@@ -146,24 +158,24 @@ import '../styles/global.css';
     <div class="container">
       <div class="section-header-spaced">
         <span class="label label-blue">L'équipe</span>
-        <h2>Les Animateurs</h2>
+        <h2>Les Formatrices FLE</h2>
         <div class="divider divider-center"></div>
       </div>
 
       <div class="animateurs-grid">
         <div class="animateur-card" data-animate>
-          <div class="animateur-avatar">
-            <img src="/perso-tabliers-bleus/2.webp" alt="" />
+          <div class="animateur-avatar animateur-avatar-photo">
+            <img src="/vrais-photos/veronique-andre.jpg" alt="Véronique André" />
           </div>
           <h3>Véronique André</h3>
-          <p>Animatrice</p>
+          <p>Formatrice FLE</p>
         </div>
         <div class="animateur-card" data-animate>
           <div class="animateur-avatar">
             <img src="/perso-tabliers-bleus/4.webp" alt="" />
           </div>
           <h3>Yixin Guo</h3>
-          <p>Animatrice</p>
+          <p>Formatrice FLE</p>
         </div>
       </div>
     </div>
@@ -208,6 +220,25 @@ import '../styles/global.css';
             </svg>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appel à stagiaires/bénévoles FLE -->
+  <section class="section become-fle">
+    <div class="container">
+      <div class="become-fle-content" data-animate>
+        <span class="label label-blue">Appel à stagiaires/bénévoles</span>
+        <h2>Rejoignez l'équipe FLE</h2>
+        <p class="become-fle-intro">
+          Vous êtes étudiant.e en FLE, enseignant.e ou passionné.e par l'apprentissage des langues ? Rejoignez notre équipe en tant que stagiaire ou bénévole pour accompagner les apprenants dans leur parcours linguistique.
+        </p>
+        <a href="mailto:blablacooks@gmail.com" class="btn btn-primary btn-blue">
+          Nous contacter
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -397,6 +428,16 @@ import '../styles/global.css';
     filter: brightness(0) invert(1);
   }
 
+  .concept-character {
+    flex-shrink: 0;
+  }
+
+  .concept-character img {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(92, 74, 61, 0.15));
+  }
+
   .concept-text p {
     font-size: 1.1rem;
     color: var(--color-brown-dark);
@@ -565,6 +606,17 @@ import '../styles/global.css';
     object-fit: contain;
   }
 
+  .animateur-avatar-photo {
+    overflow: hidden;
+  }
+
+  .animateur-avatar-photo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
   .animateur-card h3 {
     font-family: var(--font-body);
     font-size: 1.1rem;
@@ -674,6 +726,34 @@ import '../styles/global.css';
   .btn-full {
     width: 100%;
     justify-content: center;
+  }
+
+  .tarif-box-extra {
+    margin-top: var(--space-sm);
+  }
+
+  /* Become FLE */
+  .become-fle {
+    background: var(--color-cream-dark);
+    text-align: center;
+  }
+
+  .become-fle-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .become-fle-content h2 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .become-fle-intro {
+    font-size: 1.05rem;
+    color: var(--color-brown);
+    opacity: 0.8;
+    margin-bottom: var(--space-lg);
+    line-height: 1.7;
   }
 
   /* Access Section */
