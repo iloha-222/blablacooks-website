@@ -47,21 +47,21 @@ import '../styles/global.css';
           <!-- Quinconce: 3 en haut, 3 en bas -->
           <div class="char-row char-row-top">
             <div class="char animate-float">
-              <img src="/perso-nationalites/Libanaise.webp" alt="" />
+              <img src="/perso-nationalites/homme-blond-cuisine.png" alt="" />
             </div>
             <div class="char animate-float-delayed">
-              <img src="/perso-nationalites/Grec.webp" alt="" />
+              <img src="/perso-nationalites/Japonaise.webp" alt="" />
             </div>
             <div class="char animate-float">
-              <img src="/perso-nationalites/Tibetain.webp" alt="" />
+              <img src="/perso-nationalites/femme-couture.png" alt="" />
             </div>
           </div>
           <div class="char-row char-row-bottom">
             <div class="char animate-float-delayed">
-              <img src="/perso-nationalites/Armenienne.webp" alt="" />
+              <img src="/perso-nationalites/Ivoirien.webp" alt="" />
             </div>
             <div class="char animate-float">
-              <img src="/perso-nationalites/Ukrainienne.webp" alt="" />
+              <img src="/perso-nationalites/homme-couture.png" alt="" />
             </div>
             <div class="char animate-float-delayed">
               <img src="/perso-nationalites/Bresilienne.webp" alt="" />
@@ -223,6 +223,18 @@ import '../styles/global.css';
       </div>
 
       <div class="past-grid">
+        <!-- Event 0 - Brunch Camerounais -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/brunch camerounais.png" alt="Brunch Camerounais" class="pos-center" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">8 Février 2026</span>
+            <h3>Brunch Camerounais</h3>
+            <p>Beignets de haricots croustillants et bouillie crémeuse, tradition matinale d'Afrique de l'Ouest. Avec Adèle Nguelefack.</p>
+          </div>
+        </article>
+
         <!-- Event 1 -->
         <article class="past-card" data-animate>
           <div class="past-image">
@@ -314,7 +326,47 @@ import '../styles/global.css';
       </div>
 
       <div class="events-grid">
-        <!-- Event 1: Couture -->
+        <!-- Event 1: Cuisine Palestinienne -->
+        <article class="event-card event-featured" data-animate>
+          <div class="event-image">
+            <img src="/vrais-photos/cuisine-palestinienne-temp.jpg" alt="Cuisine Palestinienne Végétarienne" />
+            <div class="event-status status-cuisine">Cuisine</div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span class="event-category cat-cuisine">
+                <img src="/icons/noun-chef-hat-6972227.svg" alt="" class="event-icon" />
+                Cuisine
+              </span>
+              <span class="event-date">22 Mars 2026</span>
+            </div>
+            <h3 class="event-title">Cuisine Palestinienne Végétarienne</h3>
+            <p class="event-desc">Soupe de lentilles corail aux épices du Moyen-Orient, houmous, moutabal et kunefe au fromage et à l'eau de rose. Avec Sawal, co-animé par Hinde Massaoudi.</p>
+            <div class="event-tags-dietary">
+              <span>végétarien</span>
+            </div>
+            <div class="event-details">
+              <div class="detail">
+                <img src="/icons/horaire.svg" alt="" class="detail-icon" />
+                Dimanche
+              </div>
+              <div class="detail">
+                <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
+                Halle Tropisme
+              </div>
+            </div>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-de-cuisine-palestinienne-vegetarienne" target="_blank" class="btn btn-event btn-terracotta">
+              Réserver ma place
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Event 2: Couture -->
         <article class="event-card" data-animate>
           <div class="event-image">
             <img src="/vrais-photos/couture-atelier.png" alt="Ateliers Blablacouture" />
@@ -326,10 +378,10 @@ import '../styles/global.css';
                 <img src="/icons/noun-sew-4331889.svg" alt="" class="event-icon" />
                 Couture
               </span>
-              <span class="event-date">9 Jan → 20 Fév 2026</span>
+              <span class="event-date">13 Mars → 17 Mai 2026</span>
             </div>
             <h3 class="event-title">Ateliers Blablacouture</h3>
-            <p class="event-desc">Initiez-vous à la couture dans un espace de rencontre interculturelle.</p>
+            <p class="event-desc">Initiez-vous à la couture dans un espace de rencontre interculturelle. Avec Irina Isakova et Irène Velay.</p>
             <div class="event-details">
               <div class="detail">
                 <img src="/icons/horaire.svg" alt="" class="detail-icon" />
@@ -340,49 +392,8 @@ import '../styles/global.css';
                 MPT Voltaire
               </div>
             </div>
-            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-blablacouture-automne-2" target="_blank" class="btn btn-event btn-gold">
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-blablacouture-printemps-26" target="_blank" class="btn btn-event btn-gold">
               S'inscrire
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Event 2: Brunch -->
-        <article class="event-card event-featured" data-animate>
-          <div class="event-image">
-            <img src="/vrais-photos/brunch camerounais.png" alt="Brunch Camerounais" />
-            <div class="event-status status-cuisine">Cuisine</div>
-          </div>
-          <div class="event-body">
-            <div class="event-meta">
-              <span class="event-category cat-cuisine">
-                <img src="/icons/noun-chef-hat-6972227.svg" alt="" class="event-icon" />
-                Cuisine
-              </span>
-              <span class="event-date">8 Février 2026</span>
-            </div>
-            <h3 class="event-title">Brunch Camerounais</h3>
-            <p class="event-desc">Beignets de haricots croustillants et bouillie crémeuse, tradition matinale d'Afrique de l'Ouest avec Adèle Nguelefack.</p>
-            <div class="event-tags-dietary">
-              <span>végétarien</span>
-              <span>sans gluten</span>
-            </div>
-            <div class="event-details">
-              <div class="detail">
-                <img src="/icons/horaire.svg" alt="" class="detail-icon" />
-                10h45 - 14h
-              </div>
-              <div class="detail">
-                <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
-                Halle Tropisme
-              </div>
-            </div>
-            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-brunch-camerounais" target="_blank" class="btn btn-event btn-terracotta">
-              Réserver ma place
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                 <polyline points="15 3 21 3 21 9"/>
@@ -396,7 +407,7 @@ import '../styles/global.css';
         <article class="event-card" data-animate>
           <div class="event-image">
             <img src="/vrais-photos/atelier linguistique.png" alt="Atelier Linguistique" />
-            <div class="event-status status-new">Nouveau</div>
+            <div class="event-status status-ongoing">En cours</div>
           </div>
           <div class="event-body">
             <div class="event-meta">
@@ -404,14 +415,14 @@ import '../styles/global.css';
                 <img src="/icons/noun-talk-7544702.svg" alt="" class="event-icon" />
                 Français
               </span>
-              <span class="event-date">20 Jan → 17 Fév 2026</span>
+              <span class="event-date">Mardis, 14h-16h30</span>
             </div>
             <h3 class="event-title">Atelier Linguistique</h3>
             <p class="event-desc">Cours de français A1 animés par Véronique André et Yixin Guo. Communication pour la vie quotidienne.</p>
             <div class="event-details">
               <div class="detail">
                 <img src="/icons/horaire.svg" alt="" class="detail-icon" />
-                Mardis, 14h-15h30
+                Mardis, 14h-16h30
               </div>
               <div class="detail">
                 <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
@@ -634,7 +645,7 @@ import '../styles/global.css';
   }
 
   .char img {
-    width: 204px;
+    width: 240px;
     height: auto;
   }
 
