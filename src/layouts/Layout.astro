@@ -61,7 +61,6 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
         </a>
 
         <div class="nav-links">
-          <a href="/" class="nav-link">Accueil</a>
           <div class="nav-dropdown">
             <button class="nav-link nav-dropdown-trigger">
               Ateliers
@@ -77,6 +76,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
           </div>
           <a href="/recettes-bonnes-adresses" class="nav-link">Recettes & Bonnes Adresses</a>
           <a href="/a-propos" class="nav-link">À propos</a>
+          <a href="/partenaires" class="nav-link">Partenaires</a>
         </div>
 
         <a href="/benevoles" class="nav-cta btn btn-primary">Nous rejoindre</a>
@@ -91,7 +91,6 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
       <!-- Mobile Menu -->
       <div class="mobile-menu">
         <div class="mobile-menu-content">
-          <a href="/" class="mobile-link">Accueil</a>
           <div class="mobile-dropdown">
             <span class="mobile-dropdown-title">Ateliers</span>
             <div class="mobile-dropdown-links">
@@ -102,6 +101,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
           </div>
           <a href="/recettes-bonnes-adresses" class="mobile-link">Recettes & Bonnes Adresses</a>
           <a href="/a-propos" class="mobile-link">À propos</a>
+          <a href="/partenaires" class="mobile-link">Nos partenaires</a>
           <a href="/benevoles" class="btn btn-primary mobile-cta">Nous rejoindre</a>
         </div>
       </div>
@@ -258,6 +258,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
     display: flex;
     align-items: center;
     gap: var(--space-lg);
+    margin-left: auto;
   }
 
   .nav-link {

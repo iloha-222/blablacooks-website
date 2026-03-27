@@ -223,7 +223,19 @@ import '../styles/global.css';
       </div>
 
       <div class="past-grid">
-        <!-- Event 0 - Brunch Camerounais -->
+        <!-- Event 0 - Cuisine Palestinienne -->
+        <article class="past-card" data-animate>
+          <div class="past-image">
+            <img src="/vrais-photos/cuisine-palestinienne-houmous.jpg" alt="Cuisine Palestinienne Végétarienne" class="pos-center" loading="lazy" />
+          </div>
+          <div class="past-body">
+            <span class="past-date">22 Mars 2026</span>
+            <h3>Cuisine Palestinienne Végétarienne</h3>
+            <p>Soupe de lentilles corail, houmous, moutabal et kunefe au fromage et à l'eau de rose. Avec Sawal, co-animé par Hinde Massaoudi.</p>
+          </div>
+        </article>
+
+        <!-- Event 1 - Brunch Camerounais -->
         <article class="past-card" data-animate>
           <div class="past-image">
             <img src="/vrais-photos/brunch camerounais.webp" alt="Brunch Camerounais" class="pos-center" loading="lazy" />
@@ -283,29 +295,6 @@ import '../styles/global.css';
           </div>
         </article>
 
-        <!-- Event 5 -->
-        <article class="past-card" data-animate>
-          <div class="past-image">
-            <img src="/vrais-photos/a propos.jpg" alt="Atelier Tibétain" class="pos-center" loading="lazy" />
-          </div>
-          <div class="past-body">
-            <span class="past-date">12 Avril 2025</span>
-            <h3>Saveurs du Tibet</h3>
-            <p>Momos vapeur farcis aux légumes et sauce piquante traditionnelle. Avec Tenzin Dawa.</p>
-          </div>
-        </article>
-
-        <!-- Event 6 -->
-        <article class="past-card" data-animate>
-          <div class="past-image">
-            <img src="/vrais-photos/a propos-.webp" alt="Cuisine Libanaise" class="pos-top" loading="lazy" />
-          </div>
-          <div class="past-body">
-            <span class="past-date">15 Mars 2025</span>
-            <h3>Mezze Libanais</h3>
-            <p>Houmous, taboulé et falafels maison avec pita chaud. Avec Nour El-Khoury.</p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -326,47 +315,7 @@ import '../styles/global.css';
       </div>
 
       <div class="events-grid">
-        <!-- Event 1: Cuisine Palestinienne -->
-        <article class="event-card event-featured" data-animate>
-          <div class="event-image">
-            <img src="/vrais-photos/cuisine-palestinienne-temp.jpg" alt="Cuisine Palestinienne Végétarienne" loading="lazy" />
-            <div class="event-status status-cuisine">Cuisine</div>
-          </div>
-          <div class="event-body">
-            <div class="event-meta">
-              <span class="event-category cat-cuisine">
-                <img src="/icons/noun-chef-hat-6972227.svg" alt="" class="event-icon" />
-                Cuisine
-              </span>
-              <span class="event-date">22 Mars 2026</span>
-            </div>
-            <h3 class="event-title">Cuisine Palestinienne Végétarienne</h3>
-            <p class="event-desc">Soupe de lentilles corail aux épices du Moyen-Orient, houmous, moutabal et kunefe au fromage et à l'eau de rose. Avec Sawal, co-animé par Hinde Massaoudi.</p>
-            <div class="event-tags-dietary">
-              <span>végétarien</span>
-            </div>
-            <div class="event-details">
-              <div class="detail">
-                <img src="/icons/horaire.svg" alt="" class="detail-icon" />
-                Dimanche
-              </div>
-              <div class="detail">
-                <img src="/icons/noun-location-8077585.svg" alt="" class="detail-icon" />
-                Halle Tropisme
-              </div>
-            </div>
-            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-de-cuisine-palestinienne-vegetarienne" target="_blank" class="btn btn-event btn-terracotta">
-              Réserver ma place
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Event 2: Couture -->
+        <!-- Event 1: Couture -->
         <article class="event-card" data-animate>
           <div class="event-image">
             <img src="/vrais-photos/couture-atelier.webp" alt="Ateliers Blablacouture" loading="lazy" />
@@ -969,8 +918,10 @@ import '../styles/global.css';
 
   .events-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .event-card {
