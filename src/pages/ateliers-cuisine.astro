@@ -189,12 +189,69 @@ import '../styles/global.css';
     <div class="container">
       <div class="section-header section-header-light section-header-spaced" data-animate>
         <span class="label label-gold">Prochainement</span>
-        <h2>Prochain Atelier Cuisine</h2>
-        <p class="section-desc">Rejoignez-nous pour une nouvelle aventure culinaire</p>
+        <h2>Prochains Ateliers Cuisine</h2>
+        <p class="section-desc">Rejoignez-nous pour de nouvelles aventures culinaires</p>
       </div>
 
-      <div class="no-upcoming-card" data-animate>
-        <p>Pas d'atelier cuisine programmé pour le moment. Suivez-nous sur les réseaux sociaux pour être informé des prochains événements !</p>
+      <div class="upcoming-list">
+        <!-- Atelier Cambodge Occitanie -->
+        <div class="featured-event" data-animate>
+          <div class="featured-event-content">
+            <div class="featured-event-meta">
+              <span class="event-badge">Bientôt</span>
+              <span class="event-date-text">23 Mai 2026 · 9h30 – 14h30</span>
+            </div>
+            <h3>Cueillette et Cuisine Fusion Cambodge Occitanie</h3>
+            <p>
+              Rencontrez Malyne Neang et Rathana Lmuth et cuisinez avec elles un Samlor mchou kroeung (bouillon acidulé aux légumes sauvages et au poulet) revisité aux herbes d'ici — verveine, mélisse, calament. Et en dessert, un Ansam chek, gâteau au riz gluant et à la banane dans des feuilles de figue.
+            </p>
+            <div class="featured-event-tags">
+              <span>Cuisine cambodgienne</span>
+              <span>Cueillette</span>
+              <span>Plein air</span>
+            </div>
+            <div class="featured-event-location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pignan — adresse communiquée à l'inscription
+            </div>
+            <p class="featured-event-coordinator"><strong>Proposé par Malyne Neang</strong> en collaboration avec le programme "Manger comme on sème" de la Métropole</p>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-cuisine-et-balade-fusion-cambodge-occitanie" target="_blank" class="btn btn-primary btn-large">
+              S'inscrire sur HelloAsso
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Atelier Soudanais et Afghan -->
+        <div class="featured-event" data-animate>
+          <div class="featured-event-content">
+            <div class="featured-event-meta">
+              <span class="event-badge">À venir</span>
+              <span class="event-date-text">7 Juin 2026 · 10h45 – 14h</span>
+            </div>
+            <h3>Festin Soudanais et Afghan</h3>
+            <p>
+              Rencontrez Yousriya Mohamad et Farzana Nazary autour d'un menu soudanais et afghan : Aswada (salade d'aubergines sauce cacahuètes, épices et citron) et Khanom (raviolis afghans ouverts à la viande, pois chiches, yaourt et menthe).
+            </p>
+            <div class="featured-event-tags">
+              <span>Cuisine soudanaise</span>
+              <span>Cuisine afghane</span>
+            </div>
+            <div class="featured-event-location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              La Halle — RDV devant la grande porte du parking à 10h45 (entrer par la cité créative)
+            </div>
+            <p class="featured-event-coordinator"><strong>Animé par Yousriya Mohamad et Farzana Nazary</strong></p>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-de-cuisine-festin-vege-soudanais-et-afghan" target="_blank" class="btn btn-primary btn-large">
+              S'inscrire sur HelloAsso
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -802,14 +859,18 @@ import '../styles/global.css';
     color: rgba(255, 255, 255, 0.8);
   }
 
+  .upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   .featured-event {
     background: white;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
     box-shadow: var(--shadow-elevated);
   }
 
