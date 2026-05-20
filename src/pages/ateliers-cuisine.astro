@@ -855,16 +855,28 @@ import '../styles/global.css';
     color: white;
   }
 
+  .next-workshop .label-gold {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+
   .next-workshop .section-desc {
     color: rgba(255, 255, 255, 0.8);
   }
 
   .upcoming-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .upcoming-list {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
   }
 
   .featured-event {
