@@ -9,10 +9,7 @@ import '../styles/global.css';
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-    </div>
+    <div class="hero-bg"></div>
 
     <div class="container hero-content">
       <div class="hero-text">
@@ -34,122 +31,108 @@ import '../styles/global.css';
   <!-- Le Projet Blablacooks -->
   <section class="section project-section">
     <div class="container">
-      <div class="section-header-spaced">
+
+      <!-- Intro -->
+      <div class="project-intro" data-animate>
         <span class="label label-gold">Notre Mission</span>
-        <h2>Le Projet Blablacooks</h2>
-        <div class="divider divider-center"></div>
+        <h2>De vraies rencontres, riches de notre diversité et de notre humanité.</h2>
       </div>
 
-      <div class="mission-card" data-animate>
-        <p class="mission-intro">De vraies rencontres</p>
-        <p class="mission-subtitle">Riches de notre diversité et de notre humanité.</p>
-        <p>
-          Le projet Blablacooks a pour vocation de favoriser la création de liens interculturels en français, la mixité et l'inclusion sociale par la mise en lumière et le partage des richesses culturelles et des savoir-faire des nouveaux arrivants d'origine étrangère dans la région de Montpellier.
-        </p>
-        <p>
-          Le changement, l'accueil de nouveaux arrivants est un défi pour nous toutes et tous et la peur de l'autre vient souvent de la peur de l'inconnu, nous proposons des occasions de nous rencontrer et de découvrir nos richesses et notre humanité.
-        </p>
-        <p>
-          Blablacooks propose des ateliers de cuisine suivis d'un repas partagé et des ateliers de couture animés par des personnes récemment arrivées en France. Depuis la rentrée 2026, Blablacooks propose aussi un cours de français.
-        </p>
-      </div>
-
-      <!-- Three Activities Cards -->
-      <div class="activities-grid">
-        <!-- Rencontre et Discussion -->
-        <div class="activity-card activity-blue" data-animate>
-          <div class="activity-icon">
-            <img src="/icons/noun-talk-7544702.svg" alt="" />
-          </div>
-          <h3>Rencontre & Discussion</h3>
+      <!-- Storytelling blocks -->
+      <div class="story-blocks">
+        <div class="story-block" data-animate>
+          <h3>Créer du lien</h3>
           <p>
-            Se rencontrer, parler français et passer un bon moment autour d'un repas convivial par des discussions informelles en français.
+            Le projet Blablacooks a pour vocation de favoriser la création de liens interculturels en français, la mixité et l'inclusion sociale par la mise en lumière et le partage des richesses culturelles et des savoir-faire des nouveaux arrivants d'origine étrangère dans la région de Montpellier.
           </p>
         </div>
+        <div class="story-block" data-animate>
+          <h3>Briser la peur de l'inconnu</h3>
+          <p>
+            Le changement, l'accueil de nouveaux arrivants est un défi pour nous toutes et tous et la peur de l'autre vient souvent de la peur de l'inconnu, nous proposons des occasions de nous rencontrer et de découvrir nos richesses et notre humanité.
+          </p>
+        </div>
+      </div>
 
-        <!-- Ateliers Couture -->
-        <div class="activity-card activity-gold" data-animate>
-          <div class="activity-icon">
+      <!-- Bento grid activités -->
+      <div class="bento-grid">
+        <div class="bento-cell bento-cuisine" data-animate>
+          <div class="bento-icon">
+            <img src="/icons/noun-dining-6972190.svg" alt="" />
+          </div>
+          <h3>Cuisine & Repas partagé</h3>
+          <p>Des ateliers de cuisine participative du monde, suivis d'un repas convivial où l'on parle français autour de la table.</p>
+        </div>
+        <div class="bento-cell bento-couture" data-animate>
+          <div class="bento-icon">
             <img src="/icons/noun-sew-4331889.svg" alt="" />
           </div>
           <h3>Ateliers Couture</h3>
-          <p>
-            Apprendre ou développer des compétences en couture pour créer et adapter ses vêtements tout en discutant en français dans une ambiance conviviale dans un groupe de 6 à 8 personnes composé de personnes arrivant de l'étranger et de "locaux" francophones. Session de 7 ateliers les vendredi matin de 9h30 à 12h30 à la Maison pour Tous Voltaire.
-          </p>
+          <p>Créer et adapter ses vêtements en groupe de 6 à 8, mêlant personnes arrivant de l'étranger et francophones locaux. Les vendredi matin, 9h30-12h30, Maison pour Tous Voltaire.</p>
+        </div>
+        <div class="bento-cell bento-francais" data-animate>
+          <div class="bento-icon">
+            <img src="/icons/noun-talk-7544702.svg" alt="" />
+          </div>
+          <h3>Cours de français</h3>
+          <p>Depuis la rentrée 2026, des cours pour pratiquer le français dans un cadre bienveillant et concret.</p>
         </div>
       </div>
 
-      <!-- Bottom Text -->
-      <div class="project-bottom">
-        <p class="autonomy-text" data-animate>
-          À terme, les animateurs et les animatrices d'ateliers acquièrent les compétences nécessaires pour pouvoir conduire leurs ateliers de manière autonome et organiser leurs propres événements.
-        </p>
+    </div>
 
-        <div class="vision-card" data-animate>
-          <p>
-            Le projet Blablacooks aspire à sensibiliser les montpelliérains du quartier aux richesses culturelles que représentent ces personnes et leur permettre de briser leurs représentations à travers des expériences sensorielles en créant du lien entre les habitants du quartier et les personnes d'origine étrangère.
-          </p>
-        </div>
-      </div>
     </div>
   </section>
+
+  <!-- Vision band -->
+  <div class="vision-band" data-animate>
+    <div class="container">
+      <p>
+        Blablacooks aspire à sensibiliser les montpelliérains du quartier aux richesses culturelles que représentent ces personnes et leur permettre de briser leurs représentations à travers des expériences sensorielles en créant du lien entre les habitants du quartier et les personnes d'origine étrangère.
+      </p>
+      <p>
+        À terme, les animateurs et animatrices acquièrent les compétences nécessaires pour conduire leurs ateliers de manière autonome et organiser leurs propres événements.
+      </p>
+    </div>
+  </div>
 
   <!-- Comment l'idée nous est venue -->
   <section class="section idea-section">
     <div class="container">
-      <div class="section-header-spaced">
-        <span class="label label-sage">L'origine</span>
-        <h2>Comment l'idée nous est venue ?</h2>
-        <div class="divider divider-center"></div>
-      </div>
+      <div class="idea-layout">
+        <div class="idea-header" data-animate>
+          <span class="label label-sage">L'origine</span>
+          <h2>Comment l'idée nous est venue ?</h2>
+        </div>
 
-      <div class="idea-content">
-        <!-- Deux Constats -->
-        <div class="constats-card" data-animate>
-          <h3>Deux constats</h3>
+        <div class="idea-constats">
+          <div class="idea-constat" data-animate>
+            <h3>Des personnes doivent quitter leur pays</h3>
+            <p>
+              Des gens doivent fuir tous les jours leur pays à cause de guerres, du réchauffement climatique, pour des raisons d'orientations politiques, religieuses ou sexuelles. Certain.e.s viennent vivre temporairement ou définitivement en Occitanie et souhaitent trouver des occasions de parler en français et de rencontrer des « locaux ».
+            </p>
+          </div>
 
-          <div class="constats-grid">
-            <!-- Constat 1 -->
-            <div class="constat constat-1">
-              <div class="constat-header">
-                <span class="constat-number">1</span>
-                <h4>Des personnes doivent quitter leur pays</h4>
-              </div>
-              <p>
-                Des gens doivent fuir tous les jours leur pays à cause de guerres, du réchauffement climatique, pour des raisons d'orientations politiques, religieuses ou sexuelles. Certain.e.s viennent vivre temporairement ou définitivement en Occitanie et souhaitent trouver des occasions de parler en français et de rencontrer des « locaux ».
-              </p>
-            </div>
-
-            <!-- Constat 2 -->
-            <div class="constat constat-2">
-              <div class="constat-header">
-                <span class="constat-number">2</span>
-                <h4>Des « gens d'ici » sont curieux</h4>
-              </div>
-              <p>
-                Des « gens d'ici » sont curieux d'autres cultures et souhaitent rencontrer de nouveaux et nouvelles arrivant.e.s., participer à leur accueil et rencontrer d'autres personnes de la région autour d'une activité enrichissante et conviviale.
-              </p>
-            </div>
+          <div class="idea-constat" data-animate>
+            <h3>Des « gens d'ici » sont curieux</h3>
+            <p>
+              Des « gens d'ici » sont curieux d'autres cultures et souhaitent rencontrer de nouveaux et nouvelles arrivant.e.s., participer à leur accueil et rencontrer d'autres personnes de la région autour d'une activité enrichissante et conviviale.
+            </p>
           </div>
         </div>
 
-        <!-- Arrow -->
         <div class="idea-arrow">
-          <div class="arrow-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-          </div>
+          <svg width="24" height="48" viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 0v38M5 32l7 10 7-10"/>
+          </svg>
         </div>
 
-        <!-- Une Idée -->
-        <div class="idea-card" data-animate>
-          <div class="idea-icon">
+        <div class="idea-conclusion" data-animate>
+          <div class="idea-conclusion-icon">
             <img src="/icons/noun-cooking-academy-5381426.svg" alt="" />
           </div>
-          <h3>Une idée !</h3>
           <p>
-            Et voilà ! L'idée du projet Blablacooks est née ! Actuellement, Blablacooks propose un espace de rencontre le temps d'un atelier de cuisine participative du monde ou de couture. D'autres projets viendront.
+            Et voilà, l'idée du projet Blablacooks est née ! Un espace de rencontre le temps d'un atelier de cuisine participative du monde ou de couture. D'autres projets viendront.
           </p>
         </div>
       </div>
@@ -162,7 +145,7 @@ import '../styles/global.css';
       <div class="section-header-spaced">
         <span class="label label-terracotta">Souvenirs</span>
         <h2>Nos Ateliers en Images</h2>
-        <div class="divider divider-center"></div>
+
       </div>
 
       <div class="gallery-grid">
@@ -229,7 +212,7 @@ import '../styles/global.css';
       <div class="section-header-spaced">
         <span class="label label-gold">L'équipe</span>
         <h2>Nos Experts Blablacooks</h2>
-        <div class="divider divider-center"></div>
+
         <p class="section-desc">
           Rencontrez les personnes passionnées qui font vivre le projet Blablacooks
         </p>
@@ -274,32 +257,28 @@ import '../styles/global.css';
   <!-- Call to Action -->
   <section class="section cta-section">
     <div class="container">
-      <div class="cta-card" data-animate>
-        <div class="cta-icon">
-          <img src="/icons/noun-globe-6688733.svg" alt="" />
-        </div>
-        <h2>Rejoignez l'aventure Blablacooks</h2>
-        <p>
-          Participez à nos ateliers et découvrez les richesses culturelles du monde entier
-        </p>
-        <div class="cta-buttons">
-          <a href="/" class="btn btn-primary">
-            Voir nos événements
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            Nous contacter
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Decorative characters -->
-        <img src="/perso-nationalites/homme-blond-cuisine.webp" alt="" class="cta-character cta-character-left" />
-        <img src="/perso-nationalites/femme-couture.webp" alt="" class="cta-character cta-character-right" />
+      <div class="cta-center" data-animate>
+          <div class="cta-icon">
+            <img src="/perso-nationalites/femme-couture.webp" alt="" />
+          </div>
+          <h2>Rejoignez l'aventure Blablacooks</h2>
+          <p>
+            Participez à nos ateliers et découvrez les richesses culturelles du monde entier
+          </p>
+          <div class="cta-buttons">
+            <a href="/" class="btn btn-primary">
+              Voir nos événements
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Nous contacter
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </a>
+          </div>
       </div>
     </div>
   </section>
@@ -309,60 +288,39 @@ import '../styles/global.css';
   /* Hero Section */
   .hero {
     position: relative;
-    min-height: 85vh;
     display: flex;
     align-items: center;
-    padding: 120px 0 var(--space-2xl);
+    padding: 120px 0 var(--space-xl);
     overflow: hidden;
   }
 
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 50%, var(--color-sand) 100%);
-  }
-
-  .hero-bg .blob {
-    position: absolute;
-  }
-
-  .hero-bg .blob-1 {
-    width: 600px;
-    height: 600px;
-    top: -200px;
-    right: -150px;
-    background: linear-gradient(135deg, rgba(196, 87, 59, 0.08), rgba(212, 161, 74, 0.05));
-    animation: blob-morph 20s ease-in-out infinite;
-  }
-
-  .hero-bg .blob-2 {
-    width: 400px;
-    height: 400px;
-    bottom: -100px;
-    left: -100px;
-    background: linear-gradient(135deg, rgba(143, 166, 134, 0.1), rgba(200, 212, 194, 0.05));
-    animation: blob-morph 25s ease-in-out infinite reverse;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
   }
 
   .hero-content {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-lg);
     align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
   }
 
   .hero-text {
-    max-width: 540px;
+    max-width: 400px;
   }
 
   .hero-text h1 {
     margin: var(--space-md) 0;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3rem);
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--color-brown);
     opacity: 0.8;
     line-height: 1.7;
@@ -380,22 +338,12 @@ import '../styles/global.css';
     overflow: hidden;
     box-shadow: var(--shadow-elevated);
     border: 6px solid white;
-    max-width: 500px;
+    width: 100%;
   }
 
   .hero-image-frame img {
     width: 100%;
     height: auto;
-  }
-
-  .hero-character {
-    position: absolute;
-    bottom: -40px;
-    right: -60px;
-    width: 160px;
-    height: auto;
-    animation: float 6s ease-in-out infinite;
-    z-index: 2;
   }
 
   /* Section Header Spaced */
@@ -427,163 +375,153 @@ import '../styles/global.css';
     background: white;
   }
 
-  .mission-card {
-    max-width: 800px;
-    margin: 0 auto var(--space-xl);
-    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    border: 1px solid var(--color-sand);
-  }
-
-  .mission-card .mission-intro {
-    font-family: var(--font-display);
-    font-size: 1.75rem;
-    font-weight: 500;
-    color: var(--color-terracotta);
-    margin-bottom: var(--space-xs);
-  }
-
-  .mission-card .mission-subtitle {
-    font-size: 1.15rem;
-    font-style: italic;
-    color: var(--color-brown);
-    opacity: 0.8;
-    margin-bottom: var(--space-md);
-  }
-
-  .mission-card p {
-    font-size: 1.1rem;
+  /* Project intro */
+  .project-intro {
     text-align: center;
-    color: var(--color-brown-dark);
-    line-height: 1.8;
-    max-width: none;
-    margin-bottom: var(--space-sm);
-  }
-
-  .mission-card p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Activities Grid */
-  .activities-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-    margin-bottom: var(--space-xl);
-    max-width: 800px;
+    margin-bottom: var(--space-2xl);
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .activity-card {
-    background: white;
-    border-radius: var(--radius-lg);
+  .project-intro .label {
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-intro h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    line-height: 1.25;
+    margin-top: var(--space-sm);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Story blocks */
+  .story-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    max-width: 960px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .story-block {
     padding: var(--space-lg);
-    border-left: 4px solid;
-    box-shadow: var(--shadow-soft);
-    transition: all 0.4s var(--ease-out-expo);
+    background: var(--color-cream);
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
   }
 
-  .activity-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-elevated);
+  .story-block:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
   }
 
-  .activity-blue {
-    border-color: var(--color-dusty-blue);
+  .story-block h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0;
   }
 
-  .activity-terracotta {
-    border-color: var(--color-terracotta);
+  .story-block p {
+    font-size: 1rem;
+    color: var(--color-brown);
+    line-height: 1.7;
+    max-width: none;
   }
 
-  .activity-gold {
-    border-color: var(--color-gold);
+  /* Bento grid */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--space-md);
+    max-width: 960px;
+    margin: 0 auto var(--space-2xl);
   }
 
-  .activity-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--space-md);
+  .bento-cell {
+    padding: var(--space-lg);
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
   }
 
-  .activity-icon img {
-    width: 32px;
-    height: 32px;
+  .bento-cell:hover {
+    transform: translateY(-2px);
   }
 
-  .activity-blue .activity-icon {
-    background: rgba(126, 154, 175, 0.15);
+  .bento-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-sm);
   }
 
-  .activity-blue .activity-icon img {
-    filter: invert(65%) sepia(15%) saturate(500%) hue-rotate(175deg) brightness(90%) contrast(85%);
+  .bento-icon img {
+    width: 100%;
+    height: 100%;
   }
 
-  .activity-terracotta .activity-icon {
-    background: rgba(196, 87, 59, 0.12);
-  }
-
-  .activity-terracotta .activity-icon img {
+  .bento-cuisine .bento-icon img {
     filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
   }
 
-  .activity-gold .activity-icon {
-    background: rgba(212, 161, 74, 0.15);
-  }
-
-  .activity-gold .activity-icon img {
+  .bento-couture .bento-icon img {
     filter: invert(70%) sepia(50%) saturate(500%) hue-rotate(5deg) brightness(95%) contrast(90%);
   }
 
-  .activity-card h3 {
-    font-family: var(--font-body);
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-    color: var(--color-brown-dark);
+  .bento-francais .bento-icon img {
+    filter: invert(65%) sepia(15%) saturate(500%) hue-rotate(175deg) brightness(90%) contrast(85%);
   }
 
-  .activity-card p {
+  .bento-cell h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-brown-dark);
+    margin-bottom: var(--space-xs);
+  }
+
+  .bento-cell p {
     font-size: 0.95rem;
     color: var(--color-brown);
-    opacity: 0.7;
-    line-height: 1.7;
+    line-height: 1.6;
+    max-width: none;
   }
 
-  /* Project Bottom */
-  .project-bottom {
-    max-width: 800px;
+  .bento-cuisine {
+    background: #fef4ee;
+    grid-row: span 2;
+  }
+
+  .bento-couture {
+    background: #fdf6e8;
+  }
+
+  .bento-francais {
+    background: #eef3f6;
+  }
+
+  /* Vision band */
+  .vision-band {
+    background: var(--color-terracotta);
+    padding: var(--space-2xl) 0;
+  }
+
+  .vision-band p {
+    color: white;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    line-height: 1.7;
+    text-align: center;
+    max-width: 750px;
     margin: 0 auto;
   }
 
-  .autonomy-text {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--color-brown);
-    opacity: 0.8;
-    margin-bottom: var(--space-lg);
-    line-height: 1.7;
-    max-width: none;
-  }
-
-  .vision-card {
-    background: var(--color-terracotta);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-  }
-
-  .vision-card p {
-    text-align: center;
-    font-size: 1.15rem;
-    color: white;
-    line-height: 1.8;
-    max-width: none;
+  .vision-band p + p {
+    margin-top: var(--space-md);
   }
 
   /* Idea Section */
@@ -591,151 +529,87 @@ import '../styles/global.css';
     background: var(--color-cream-dark);
   }
 
-  .idea-content {
-    max-width: 900px;
+  .idea-layout {
+    max-width: 960px;
     margin: 0 auto;
   }
 
-  .constats-card {
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-sand);
-    margin-bottom: var(--space-md);
+  .idea-header {
+    margin-bottom: var(--space-xl);
   }
 
-  .constats-card h3 {
-    font-size: 1.75rem;
-    margin-bottom: var(--space-lg);
-    text-align: center;
+  .idea-header h2 {
+    margin-top: var(--space-sm);
   }
 
-  .constats-grid {
+  .idea-constats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
   }
 
-  .constat {
-    background: linear-gradient(135deg, var(--color-cream) 0%, white 100%);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
-    border-left: 4px solid;
+  .idea-constat {
+    background: white;
+    border-radius: 20px;
+    padding: var(--space-lg);
+    transition: all 0.2s ease-in-out;
   }
 
-  .constat-1 {
-    border-color: var(--color-terracotta-light);
+  .idea-constat:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
   }
 
-  .constat-2 {
-    border-color: var(--color-dusty-blue);
-  }
-
-  .constat-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
+  .idea-constat h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-brown-dark);
     margin-bottom: var(--space-sm);
   }
 
-  .constat-number {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-body);
-    font-weight: 700;
-    color: white;
-    flex-shrink: 0;
-  }
-
-  .constat-1 .constat-number {
-    background: var(--color-terracotta-light);
-  }
-
-  .constat-2 .constat-number {
-    background: var(--color-dusty-blue);
-  }
-
-  .constat-header h4 {
-    font-family: var(--font-body);
+  .idea-constat p {
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-brown-dark);
-    line-height: 1.3;
-  }
-
-  .constat p {
-    font-size: 0.9rem;
     color: var(--color-brown);
-    opacity: 0.75;
     line-height: 1.7;
+    max-width: none;
   }
 
-  /* Arrow */
   .idea-arrow {
     display: flex;
     justify-content: center;
-    margin: var(--space-md) 0;
-  }
-
-  .arrow-circle {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--color-gold) 0%, #e0a50f 100%);
-    border-radius: 50%;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    box-shadow: var(--shadow-medium);
-    animation: bounce 2s infinite;
+    margin: var(--space-lg) 0;
+    color: var(--color-sage);
   }
 
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+  .idea-conclusion {
+    background: var(--color-sage);
+    border-radius: 20px;
+    padding: var(--space-lg);
+    text-align: center;
   }
 
-  /* Idea Card */
-  .idea-card {
-    background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    color: white;
+  .idea-conclusion-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-sm);
   }
 
-  .idea-icon {
-    width: 64px;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--space-md);
-  }
-
-  .idea-icon img {
-    width: 40px;
-    height: 40px;
+  .idea-conclusion-icon img {
+    width: 100%;
+    height: 100%;
     filter: brightness(0) invert(1);
+    opacity: 0.9;
   }
 
-  .idea-card h3 {
-    font-size: 1.75rem;
-    color: white;
-    margin-bottom: var(--space-md);
-  }
-
-  .idea-card p {
+  .idea-conclusion p {
     font-size: 1.1rem;
-    line-height: 1.8;
-    opacity: 0.95;
-    max-width: none;
+    color: white;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto;
   }
 
   /* Gallery Section */
@@ -874,46 +748,38 @@ import '../styles/global.css';
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(180deg, var(--color-cream-dark) 0%, var(--color-cream) 100%);
+    background: var(--color-cream-dark);
     padding-bottom: var(--space-3xl);
   }
 
-  .cta-card {
-    position: relative;
-    max-width: 800px;
+  .cta-center {
+    max-width: 500px;
     margin: 0 auto;
+    text-align: center;
     background: white;
     border-radius: var(--radius-xl);
     padding: var(--space-2xl);
-    text-align: center;
     border: 1px solid var(--color-sand);
-    box-shadow: var(--shadow-elevated);
-    overflow: hidden;
+    box-shadow: var(--shadow-soft);
   }
 
   .cta-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-light) 100%);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 120px;
+    height: auto;
     margin: 0 auto var(--space-md);
   }
 
   .cta-icon img {
-    width: 48px;
-    height: 48px;
-    filter: brightness(0) invert(1);
+    width: 100%;
+    height: auto;
   }
 
-  .cta-card h2 {
+  .cta-center h2 {
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     margin-bottom: var(--space-sm);
   }
 
-  .cta-card > p {
+  .cta-center > p {
     font-size: 1.1rem;
     color: var(--color-brown);
     opacity: 0.7;
@@ -930,29 +796,12 @@ import '../styles/global.css';
     flex-wrap: wrap;
   }
 
-  .cta-character {
-    position: absolute;
-    bottom: 0;
-    width: 140px;
-    height: auto;
-    opacity: 0.9;
-  }
-
-  .cta-character-left {
-    left: -20px;
-  }
-
-  .cta-character-right {
-    right: -20px;
-    transform: scaleX(-1);
-  }
-
   /* Responsive */
   @media (max-width: 1024px) {
     .hero-content {
       grid-template-columns: 1fr;
       text-align: center;
-      gap: var(--space-xl);
+      gap: var(--space-lg);
     }
 
     .hero-text {
@@ -960,17 +809,23 @@ import '../styles/global.css';
       margin: 0 auto;
     }
 
-    .hero-character {
-      width: 120px;
-      right: -30px;
-      bottom: -30px;
+    .hero-image-frame {
+      max-width: 500px;
     }
 
-    .activities-grid {
+    .story-blocks {
       grid-template-columns: 1fr;
     }
 
-    .constats-grid {
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .bento-cuisine {
+      grid-row: span 1;
+    }
+
+    .idea-constats {
       grid-template-columns: 1fr;
     }
 
@@ -983,41 +838,31 @@ import '../styles/global.css';
       grid-template-columns: 1fr;
     }
 
-    .cta-character {
-      display: none;
-    }
   }
 
   @media (max-width: 768px) {
     .hero {
-      min-height: auto;
-      padding: 100px 0 var(--space-xl);
+      padding: 100px 0 var(--space-lg);
     }
 
     .hero-image-frame {
-      max-width: 300px;
+      max-width: 100%;
     }
 
-    .hero-character {
-      width: 100px;
-      right: -20px;
-      bottom: -20px;
-    }
-
-    .mission-card {
+    .story-block {
       padding: var(--space-md);
     }
 
-    .mission-card p {
-      font-size: 1.05rem;
-    }
-
-    .constats-card {
+    .bento-cell {
       padding: var(--space-md);
     }
 
-    .idea-card {
-      padding: var(--space-lg);
+    .idea-constat {
+      padding: var(--space-md);
+    }
+
+    .idea-conclusion {
+      padding: var(--space-md);
     }
 
     .gallery-grid {
@@ -1029,7 +874,7 @@ import '../styles/global.css';
       padding: 10px;
     }
 
-    .cta-card {
+    .cta-center {
       padding: var(--space-xl) var(--space-md);
     }
 
