@@ -7,7 +7,7 @@ import '../styles/global.css';
   title="Ateliers Couture - Blablacooks"
   description="Apprenez la couture dans une ambiance conviviale à Montpellier. Nos ateliers couture favorisent l'échange et le partage de savoir-faire entre cultures."
 >
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg">
       <div class="blob blob-1"></div>
@@ -19,10 +19,10 @@ import '../styles/global.css';
         <span class="label label-gold">Ateliers Couture</span>
         <h1>Blablacouture</h1>
         <p class="hero-subtitle">
-          Blablacooks propose des ateliers d'initiation à la couture. Ces ateliers sont un espace pour se rencontrer entre cultures et pratiquer le français en situation réelle.
+          On coud, on cause, on se rencontre. Blablacouture réunit des personnes de tous horizons autour de la couture pour pratiquer le français en situation réelle.
         </p>
         <a href="#prochain-atelier" class="btn btn-primary btn-gold">
-          Voir les ateliers en cours
+          S'inscrire au prochain atelier
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
           </svg>
@@ -37,97 +37,54 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- Le Concept -->
-  <section class="section concept-section">
+  <!-- Prochain Atelier -->
+  <section id="prochain-atelier" class="section atelier-section">
     <div class="container">
-      <div class="section-header-spaced">
-        <span class="label label-gold">Notre approche</span>
-        <h2>Le Concept</h2>
-
-      </div>
-
-      <div class="concept-card" data-animate>
-        <div class="concept-icon">
-          <img src="/icons/noun-sew-4331889.svg" alt="" />
-        </div>
-        <div class="concept-character">
-          <img src="/perso-nationalites/couture.png" alt="" />
-        </div>
-        <div class="concept-text">
-          <p>
-            Les ateliers Blablacouture sont un espace pour se rencontrer entre cultures et pratiquer le français en situation réelle pour les personnes en cours d'apprentissage du français.
-          </p>
-          <p>
-            En parlant avec des personnes de différents horizons autour d'un savoir-faire commun, vous apprendrez les bases de la couture tout en créant des liens interculturels.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comment ça se passe -->
-  <section class="section infos-section">
-    <div class="container">
-      <div class="section-header-spaced">
-        <span class="label label-terracotta">Pratique</span>
-        <h2>Comment ça se passe ?</h2>
-
-      </div>
-
-      <div class="infos-grid">
-        <!-- Infos pratiques -->
-        <div class="info-card" data-animate>
-          <div class="info-header">
-            <div class="info-icon info-icon-gold">
-              <img src="/icons/noun-location-8077585.svg" alt="" />
-            </div>
-            <h3>Infos pratiques</h3>
+      <div class="atelier-layout">
+        <div class="atelier-card">
+          <div class="atelier-image">
+            <img src="/vrais-photos/couture-atelier.webp" alt="Ateliers Blablacouture" loading="lazy" />
           </div>
-          <ul class="info-list">
-            <li>
-              <img src="/icons/noun-location-8077585.svg" alt="" class="info-list-icon" />
-              <div>
-                <strong>Lieu :</strong>
-                <span>MPT Voltaire, 3 Square Jean Monnet</span>
-              </div>
-            </li>
-            <li>
-              <img src="/icons/horaire.svg" alt="" class="info-list-icon" />
-              <div>
-                <strong>Horaires :</strong>
+          <div class="atelier-content">
+            <div class="atelier-badges">
+              <span class="badge badge-gold">À venir</span>
+              <span class="badge-date">29 Mai → 03 Juillet 2026</span>
+            </div>
+            <h2>Atelier de Couture Interculturel</h2>
+            <p>
+              5 vendredis pour s'initier à la couture dans un espace de rencontre interculturelle, avec La Cimade. Animé par une couturière récemment arrivée en France et Irène Velay, couturière montpelliéraine.
+            </p>
+            <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-de-couture-interculturel-l-ete" target="_blank" class="btn btn-primary btn-gold btn-full">
+              S'inscrire sur HelloAsso
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="atelier-side">
+          <div class="side-card side-card-details">
+            <h3>Le format</h3>
+            <ul class="detail-list">
+              <li>
+                <svg class="detail-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 <span>Vendredis, 9h à 12h</span>
-              </div>
-            </li>
-            <li>
-              <img src="/icons/noun-group-8132009.svg" alt="" class="info-list-icon" />
-              <div>
-                <strong>Groupe :</strong>
+              </li>
+              <li>
+                <svg class="detail-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>5 ateliers consécutifs</span>
+              </li>
+              <li>
+                <svg class="detail-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 <span>6 participants (3 francophones + 3 apprenants)</span>
-              </div>
-            </li>
-            <li>
-              <img src="/icons/noun-cooking-step-5381425.svg" alt="" class="info-list-icon" />
-              <div>
-                <strong>Engagement :</strong>
-                <span>5 ateliers</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Tarifs -->
-        <div class="info-card" data-animate>
-          <div class="info-header">
-            <div class="info-icon info-icon-blue">
-              <img src="/icons/tarifs.svg" alt="" />
-            </div>
-            <h3>Tarifs</h3>
+              </li>
+            </ul>
           </div>
-          <p class="tarif-intro">
-            5 ateliers + adhésion incluse :
-          </p>
-          <div class="tarif-box">
-            <div class="tarif-row tarif-total">
+
+          <div class="side-card side-card-tarifs">
+            <h3>Tarifs</h3>
+            <div class="tarif-row tarif-main">
               <span>5 ateliers + adhésion</span>
               <span class="tarif-price">56 €</span>
             </div>
@@ -135,128 +92,71 @@ import '../styles/global.css';
               <span>Déjà adhérent·e</span>
               <span class="tarif-price">50 €</span>
             </div>
+            <p class="tarif-note">Adhésion de 7 € à la Maison Pour Tous incluse (3,50 € pour les ados).</p>
           </div>
-          <p class="tarif-note">Adhésion de 7 € à la Maison Pour Tous incluse (3,50 € pour les adolescents).</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Les Animatrices -->
-  <section class="section animatrices-section">
-    <div class="container">
-      <div class="section-header-spaced">
-        <span class="label label-gold">L'équipe</span>
-        <h2>Les Animatrices</h2>
-
-      </div>
-
-      <div class="animatrices-grid">
-        <div class="animatrice-card" data-animate>
-          <h3>Irène Velay</h3>
-          <p>Facilitatrice FLE et coordinatrice</p>
-        </div>
-        <div class="animatrice-card" data-animate>
-          <h3>Couturière de l'été</h3>
-          <p>Arrivée depuis moins de 5 ans, en cours d'apprentissage du français</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Prochain Atelier -->
-  <section id="prochain-atelier" class="section atelier-section">
-    <div class="container">
-      <div class="section-header-spaced">
-        <span class="label label-white">Inscrivez-vous</span>
-        <h2>Ateliers en Cours</h2>
-        <p class="section-desc-white">Rejoignez-nous pour apprendre la couture</p>
-      </div>
-
-      <div class="atelier-card" data-animate>
-        <div class="atelier-image">
-          <img src="/vrais-photos/couture-atelier.webp" alt="Ateliers Blablacouture" loading="lazy" />
-        </div>
-        <div class="atelier-content">
-          <div class="atelier-badges">
-            <span class="badge badge-gold">À venir</span>
-            <span class="badge-date">29 Mai → 03 Juillet 2026</span>
-          </div>
-          <h3>Atelier de Couture Interculturel — l'Été</h3>
-          <p>
-            Blablacooks et La Cimade vous proposent 5 vendredis pour s'initier à la couture dans un espace de rencontre interculturelle. Animé par une couturière récemment arrivée en France et Irène Velay, couturière francophone montpelliéraine.
-          </p>
-          <div class="atelier-details">
-            <div class="atelier-detail">
-              <img src="/icons/horaire.svg" alt="" />
-              <span>Vendredis, 9h-12h</span>
-            </div>
-            <div class="atelier-detail">
-              <img src="/icons/noun-location-8077585.svg" alt="" />
-              <span>MPT Voltaire, 3 Square Jean Monnet</span>
+          <div class="side-card side-card-equipe">
+            <h3>L'équipe</h3>
+            <div class="equipe-list">
+              <div class="equipe-member">
+                <strong>Irène Velay</strong>
+                <span>Facilitatrice FLE et coordinatrice</span>
+              </div>
+              <div class="equipe-member">
+                <strong>Couturière de l'été</strong>
+                <span>Arrivée récemment, en apprentissage du français</span>
+              </div>
             </div>
           </div>
-          <a href="https://www.helloasso.com/associations/blablacooks/evenements/atelier-de-couture-interculturel-l-ete" target="_blank" class="btn btn-primary btn-gold btn-full">
-            S'inscrire sur HelloAsso
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Appel à couturiers/couturières -->
+  <!-- En pratique -->
+  <section class="section pratique-section">
+    <div class="container">
+      <div class="pratique-layout">
+        <div class="pratique-text">
+          <span class="label label-sage">En pratique</span>
+          <h2>Où nous trouver</h2>
+          <div class="pratique-address">
+            <h3>MPT Voltaire</h3>
+            <p>3 Square Jean Monnet, 34070 Montpellier</p>
+          </div>
+          <div class="pratique-transport">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            <span>Tram Ligne 3, arrêt Voltaire</span>
+          </div>
+        </div>
+        <div class="pratique-map">
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d3.8647!3d43.6048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af3c5c7d8e5d%3A0x8f9b7c6d5e4a3b2c!2s3%20Square%20Jean%20Monnet%2C%2034070%20Montpellier!5e0!3m2!1sfr!2sfr!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              title="MPT Voltaire">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rejoignez l'équipe -->
   <section class="section become-couturier">
-    <div class="become-couturier-bg"></div>
     <div class="container">
-      <div class="become-couturier-content" data-animate>
-        <span class="label label-gold">Appel à couturiers/couturières</span>
-        <h2>Rejoignez l'équipe</h2>
-        <p class="become-couturier-intro">
-          Vous avez des compétences en couture et souhaitez les partager dans un cadre interculturel ? Vous aimez transmettre et créer du lien ? Rejoignez l'aventure Blablacouture !
+      <div class="become-couturier-content">
+        <h2>Vous savez coudre ?</h2>
+        <p>
+          On cherche des couturiers et couturières qui veulent transmettre leur savoir-faire dans un cadre interculturel. Bénévolat, bonne humeur et envie de partager.
         </p>
-        <a href="mailto:blablacooks@gmail.com" class="btn btn-gold">
+        <a href="mailto:blablacooks@gmail.com" class="btn btn-cta-white">
           Nous contacter
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comment venir -->
-  <section class="section access-section">
-    <div class="container">
-      <div class="section-header-spaced">
-        <span class="label label-sage">Accès</span>
-        <h2>Comment venir ?</h2>
-
-      </div>
-
-      <div class="map-card" data-animate>
-        <div class="map-frame">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d3.8647!3d43.6048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af3c5c7d8e5d%3A0x8f9b7c6d5e4a3b2c!2s3%20Square%20Jean%20Monnet%2C%2034070%20Montpellier!5e0!3m2!1sfr!2sfr!4v1234567890"
-            allowfullscreen=""
-            loading="lazy"
-            title="MPT Voltaire">
-          </iframe>
-        </div>
-        <div class="map-info">
-          <div class="map-address">
-            <h3>MPT Voltaire</h3>
-            <p>3 Square Jean Monnet, 34070 Montpellier</p>
-          </div>
-          <div class="map-transport">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-            <span>Tram Ligne 3, arrêt Voltaire</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -319,7 +219,7 @@ import '../styles/global.css';
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--color-brown);
     opacity: 0.8;
     line-height: 1.7;
@@ -344,7 +244,7 @@ import '../styles/global.css';
     height: auto;
   }
 
-  /* Gold button variant */
+  /* Gold button */
   .btn-gold {
     background: var(--color-gold);
     box-shadow: 0 4px 20px -4px rgba(212, 161, 74, 0.4);
@@ -355,289 +255,35 @@ import '../styles/global.css';
     box-shadow: 0 8px 30px -4px rgba(212, 161, 74, 0.5);
   }
 
-  /* Section Header Spaced */
-  .section-header-spaced {
-    text-align: center;
-    margin-bottom: var(--space-2xl);
-  }
-
-  .section-header-spaced .label {
-    margin-bottom: var(--space-sm);
-  }
-
-  .section-header-spaced h2 {
-    margin-top: var(--space-sm);
-    margin-bottom: var(--space-sm);
-  }
-
-  .section-header-spaced .section-desc {
-    color: var(--color-brown);
-    opacity: 0.7;
-    margin-top: var(--space-xs);
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section-desc-white {
-    color: white;
-    opacity: 0.85;
-    margin-top: var(--space-xs);
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .label-white {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-
-  /* Concept Section */
-  .concept-section {
-    background: white;
-  }
-
-  .concept-card {
-    max-width: 800px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #FFF9E6 0%, #FFFBF0 100%);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    border: 1px solid rgba(212, 161, 74, 0.3);
-    display: flex;
-    gap: var(--space-lg);
-    align-items: flex-start;
-  }
-
-  .concept-icon {
-    width: 64px;
-    height: 64px;
-    background: var(--color-gold);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
+  .btn-full {
+    width: 100%;
     justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .concept-icon img {
-    width: 32px;
-    height: 32px;
-    filter: brightness(0) invert(1);
-  }
-
-  .concept-character {
-    flex-shrink: 0;
-  }
-
-  .concept-character img {
-    width: 140px;
-    height: auto;
-    filter: drop-shadow(0 8px 20px rgba(92, 74, 61, 0.15));
-  }
-
-  .concept-text p {
-    font-size: 1.1rem;
-    color: var(--color-brown-dark);
-    line-height: 1.8;
-    margin-bottom: var(--space-md);
-    max-width: none;
-  }
-
-  .concept-text p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Infos Section */
-  .infos-section {
-    background: var(--color-cream-dark);
-  }
-
-  .infos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .info-card {
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-sand);
-  }
-
-  .info-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-md);
-  }
-
-  .info-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .info-icon img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-  }
-
-  .info-icon-gold {
-    background: var(--color-gold);
-  }
-
-  .info-icon-blue {
-    background: var(--color-dusty-blue);
-  }
-
-  .info-header h3 {
-    font-family: var(--font-body);
-    font-size: 1.15rem;
-    font-weight: 600;
-  }
-
-  .info-list {
-    list-style: none;
-  }
-
-  .info-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-sm);
-  }
-
-  .info-list-icon {
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
-    filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
-  }
-
-  .info-list strong {
-    color: var(--color-brown-dark);
-  }
-
-  .info-list span {
-    color: var(--color-brown);
-    opacity: 0.7;
-  }
-
-  .tarif-intro {
-    color: var(--color-brown);
-    opacity: 0.7;
-    margin-bottom: var(--space-md);
-    line-height: 1.6;
-  }
-
-  .tarif-box {
-    background: var(--color-cream-dark);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
-    margin-bottom: var(--space-sm);
-  }
-
-  .tarif-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  .tarif-row:first-child {
-    border-bottom: 1px solid var(--color-sand);
-    padding-bottom: 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .tarif-price {
-    font-family: var(--font-body);
-    font-weight: 700;
-    color: var(--color-terracotta);
-  }
-
-  .tarif-note {
-    font-size: 0.85rem;
-    color: var(--color-brown);
-    opacity: 0.6;
-  }
-
-  /* Animatrices Section */
-  .animatrices-section {
-    background: white;
-  }
-
-  .animatrices-grid {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-xl);
-    flex-wrap: wrap;
-  }
-
-  .animatrice-card {
-    text-align: center;
-  }
-
-  .animatrice-avatar {
-    width: 120px;
-    height: 120px;
-    background: rgba(212, 161, 74, 0.15);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--space-md);
-  }
-
-  .animatrice-avatar img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
-
-  .animatrice-card h3 {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-  }
-
-  .animatrice-card p {
-    font-size: 0.9rem;
-    color: var(--color-brown);
-    opacity: 0.6;
   }
 
   /* Atelier Section */
   .atelier-section {
-    background: var(--color-gold);
+    background: white;
   }
 
-  .atelier-section h2 {
-    color: white;
+  .atelier-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
   }
 
   .atelier-card {
-    max-width: 600px;
-    margin: 0 auto;
     background: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-elevated);
+    border: 1px solid var(--color-sand);
+    box-shadow: var(--shadow-soft);
   }
 
   .atelier-image {
-    aspect-ratio: 16/7;
+    aspect-ratio: 16/9;
     overflow: hidden;
   }
 
@@ -677,101 +323,165 @@ import '../styles/global.css';
     opacity: 0.6;
   }
 
-  .atelier-content h3 {
-    font-size: 1.5rem;
+  .atelier-content h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.75rem);
     margin-bottom: var(--space-sm);
   }
 
   .atelier-content > p {
     color: var(--color-brown);
-    opacity: 0.7;
+    opacity: 0.75;
     line-height: 1.7;
-    margin-bottom: var(--space-md);
-  }
-
-  .atelier-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
     margin-bottom: var(--space-lg);
+    font-size: 1rem;
   }
 
-  .atelier-detail {
+  /* Side cards */
+  .atelier-side {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .side-card {
+    background: var(--color-cream-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-sand);
+  }
+
+  .side-card h3 {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: var(--color-brown);
     opacity: 0.6;
+    margin-bottom: var(--space-sm);
   }
 
-  .atelier-detail img {
-    width: 18px;
-    height: 18px;
-    filter: invert(40%) sepia(60%) saturate(800%) hue-rotate(340deg) brightness(90%) contrast(90%);
+  .detail-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .btn-full {
-    width: 100%;
-    justify-content: center;
+  .detail-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--color-brown-dark);
   }
 
-  .tarif-box-extra {
-    margin-top: var(--space-sm);
+  .detail-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--color-gold);
   }
 
-  .tarif-total {
-    border-top: 2px solid var(--color-gold);
-    padding-top: 0.75rem;
-    margin-top: 0.5rem;
+  .tarif-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
   }
 
-  .tarif-total span {
+  .tarif-main {
+    border-bottom: 1px solid var(--color-sand);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .tarif-main span:first-child {
     font-weight: 600;
     color: var(--color-brown-dark);
   }
 
-  /* Become Couturier */
-  .become-couturier {
-    position: relative;
+  .tarif-price {
+    font-weight: 700;
+    color: var(--color-terracotta);
+  }
+
+  .tarif-note {
+    font-size: 0.8rem;
+    color: var(--color-brown);
+    opacity: 0.5;
+    margin-top: var(--space-xs);
+    line-height: 1.5;
+  }
+
+  /* En pratique */
+  .pratique-section {
     background: var(--color-cream-dark);
-    text-align: center;
   }
 
-  .become-couturier-content {
-    max-width: 600px;
+  .pratique-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+    max-width: 1000px;
     margin: 0 auto;
+    align-items: start;
   }
 
-  .become-couturier-content h2 {
+  .pratique-text .label {
+    margin-bottom: var(--space-sm);
+  }
+
+  .pratique-text h2 {
     margin-top: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .pratique-address {
     margin-bottom: var(--space-md);
   }
 
-  .become-couturier-intro {
-    font-size: 1.05rem;
+  .pratique-address h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .pratique-address p {
     color: var(--color-brown);
-    opacity: 0.8;
-    margin-bottom: var(--space-lg);
-    line-height: 1.7;
+    opacity: 0.7;
+    font-size: 0.95rem;
   }
 
-  /* Access Section */
-  .access-section {
-    background: white;
+  .pratique-transport {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-sand);
   }
 
-  .map-card {
-    max-width: 900px;
-    margin: 0 auto;
-    background: var(--color-cream-dark);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--color-sand);
+  .pratique-transport svg {
+    color: var(--color-sage);
+    flex-shrink: 0;
+  }
+
+  .pratique-map {
+    position: sticky;
+    top: 100px;
   }
 
   .map-frame {
-    aspect-ratio: 2/1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-sand);
+    aspect-ratio: 4/3;
   }
 
   .map-frame iframe {
@@ -780,39 +490,65 @@ import '../styles/global.css';
     border: 0;
   }
 
-  .map-info {
-    padding: var(--space-md);
+  /* Equipe side card */
+  .equipe-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-md);
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .map-address h3 {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+  .equipe-member {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
   }
 
-  .map-address p {
-    color: var(--color-brown);
-    opacity: 0.7;
+  .equipe-member strong {
     font-size: 0.95rem;
+    color: var(--color-brown-dark);
   }
 
-  .map-transport {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+  .equipe-member span {
+    font-size: 0.85rem;
     color: var(--color-brown);
     opacity: 0.6;
   }
 
-  .map-transport svg {
-    color: var(--color-terracotta);
+  /* Rejoignez l'équipe */
+  .become-couturier {
+    background: var(--color-gold);
+    text-align: center;
+  }
+
+  .become-couturier-content {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .become-couturier-content h2 {
+    color: white;
+    margin-bottom: var(--space-md);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .become-couturier-content > p {
+    color: white;
+    opacity: 0.9;
+    margin: 0 auto var(--space-lg);
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+  .btn-cta-white {
+    background: white;
+    color: var(--color-brown-dark);
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-cta-white:hover {
+    background: var(--color-cream);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.2);
   }
 
   /* Responsive */
@@ -828,14 +564,24 @@ import '../styles/global.css';
       margin: 0 auto;
     }
 
-    .infos-grid {
+    .atelier-layout {
       grid-template-columns: 1fr;
     }
 
-    .concept-card {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
+    .atelier-side {
+      flex-direction: row;
+    }
+
+    .side-card {
+      flex: 1;
+    }
+
+    .pratique-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .pratique-map {
+      position: static;
     }
   }
 
@@ -849,17 +595,12 @@ import '../styles/global.css';
       max-width: 320px;
     }
 
-    .concept-card {
-      padding: var(--space-md);
-    }
-
     .atelier-content {
       padding: var(--space-md);
     }
 
-    .map-info {
+    .atelier-side {
       flex-direction: column;
-      text-align: center;
     }
   }
 </style>
