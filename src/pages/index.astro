@@ -204,6 +204,32 @@ import '../styles/global.css';
   <!-- ═══════════════════════════════════════════════════════════════════
        UPCOMING EVENTS - Featured next workshops
   ═══════════════════════════════════════════════════════════════════ -->
+  <section class="upcoming-home section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="label label-terracotta">À venir</span>
+        <h2>Prochain événement</h2>
+      </div>
+      <a href="/ateliers-cuisine#prochain" class="upcoming-home-card" data-animate>
+        <div class="uhc-image">
+          <img src="/vrais-photos/evenements/tropisme-juin-2026/groupe.jpg" alt="Soirée Journée Mondiale des Réfugiés" loading="lazy" />
+          <span class="uhc-badge">Soirée unique</span>
+        </div>
+        <div class="uhc-content">
+          <span class="uhc-date">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Vendredi 19 juin 2026
+          </span>
+          <h3>Journée Mondiale des personnes Réfugiées</h3>
+          <p>Soirée de gastronomie interculturelle au Café Tropisme — cuisines soudanaise, birmane et afghane.</p>
+          <div class="uhc-tags">
+            <span>Soudanais</span><span>Birman</span><span>Afghan</span>
+          </div>
+          <span class="uhc-link">Voir l'événement →</span>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════
        PAST EVENTS - Recent workshops with details
@@ -1098,6 +1124,125 @@ import '../styles/global.css';
 
   .btn-blue:hover {
     background: #6a8799;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     UPCOMING HOME SECTION
+  ═══════════════════════════════════════════════════════════════════ */
+  .upcoming-home {
+    background: white;
+  }
+
+  .upcoming-home-card {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    background: var(--color-cream);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #EDE8E3;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.3s var(--ease-out-expo);
+  }
+
+  .upcoming-home-card:hover {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .uhc-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 220px;
+  }
+
+  .uhc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  .upcoming-home-card:hover .uhc-image img {
+    transform: scale(1.04);
+  }
+
+  .uhc-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--color-terracotta);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius-full);
+  }
+
+  .uhc-content {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .uhc-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-taupe);
+  }
+
+  .uhc-content h3 {
+    font-size: 1.35rem;
+    color: var(--color-brown-dark);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .uhc-content p {
+    font-size: 0.92rem;
+    color: var(--color-brown);
+    opacity: 0.75;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .uhc-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .uhc-tags span {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.6rem;
+    background: var(--color-sage-light);
+    color: var(--color-sage);
+    border-radius: var(--radius-full);
+    font-weight: 500;
+  }
+
+  .uhc-link {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    margin-top: auto;
+  }
+
+  @media (max-width: 768px) {
+    .upcoming-home-card {
+      grid-template-columns: 1fr;
+    }
+    .uhc-image {
+      height: 200px;
+    }
   }
 
   /* ═══════════════════════════════════════════════════════════════════

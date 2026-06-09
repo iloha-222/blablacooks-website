@@ -159,6 +159,80 @@ import '../styles/global.css';
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════
+       PROCHAIN EVENEMENT
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="next-workshop" id="prochain">
+    <div class="container">
+      <div class="section-header section-header-spaced section-header-light" data-animate>
+        <span class="label label-gold">À venir</span>
+        <h2>Prochains rendez-vous</h2>
+      </div>
+
+      <div class="upcoming-events-grid">
+      <!-- Tropisme : carte compacte avec carousel photos -->
+      <article class="event-compact-card" data-animate>
+        <div class="ecc-photos" id="ecc-photos">
+          <img src="/vrais-photos/evenements/tropisme-juin-2026/groupe.jpg" class="ecc-photo ecc-active" alt="Les cuistots au Café Tropisme" />
+          <img src="/vrais-photos/evenements/tropisme-juin-2026/majid.jpg" class="ecc-photo" alt="Majid Hoseini en cuisine" />
+          <img src="/vrais-photos/evenements/tropisme-juin-2026/yousriya.jpg" class="ecc-photo" alt="Yousriya Mohamad" />
+          <button class="ecc-arrow ecc-prev" aria-label="Photo précédente">‹</button>
+          <button class="ecc-arrow ecc-next" aria-label="Photo suivante">›</button>
+          <div class="ecc-dots">
+            <span class="ecc-dot ecc-dot-active"></span>
+            <span class="ecc-dot"></span>
+            <span class="ecc-dot"></span>
+          </div>
+        </div>
+        <div class="ecc-info">
+          <div class="featured-event-meta">
+            <span class="event-badge">Soirée unique</span>
+            <span class="event-date-text">Vendredi 19 juin 2026</span>
+          </div>
+          <h3>Journée Mondiale des personnes Réfugiées</h3>
+          <p class="ecc-desc">Soirée de gastronomie interculturelle au Café Tropisme, avec nos cuistots invités et le Chef Thibault Murat.</p>
+          <div class="featured-event-tags">
+            <span>Soudanais</span><span>Birman</span><span>Afghan</span>
+          </div>
+          <div class="featured-event-location">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Café Tropisme, Montpellier
+          </div>
+          <div class="ecc-coordinator">
+            Avec <strong>Yousriya, Thwelt Thwelt, Naw Zul Zul, Arkar</strong> et <strong>Majid Hoseini</strong> du « Petit Kaboul »
+          </div>
+          <div class="featured-event-invite">
+            Membres de l'asso, rejoignez-nous ce soir à la Halle Tropisme !
+          </div>
+          <details class="ecc-menu-details">
+            <summary>Voir le menu <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <div class="event-menu">
+              <div class="menu-course">
+                <span class="menu-label">Entrée · Soudanais</span>
+                <p>Falafels et Salade d'Aubergines à la cacahuète <em>« Al Aswad »</em></p>
+              </div>
+              <div class="menu-course">
+                <span class="menu-label">Plat · Birman</span>
+                <p>Soupe de nouilles au lait de coco et poulet <em>« Ohn No Khao Swe »</em></p>
+              </div>
+              <div class="menu-course">
+                <span class="menu-label">Plat · Afghan</span>
+                <p>Bœuf en sauce, tomates fraîches et riz afghan</p>
+              </div>
+              <div class="menu-course">
+                <span class="menu-label">Dessert · Birman</span>
+                <p>Lait de coco <em>« Tacu »</em></p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      </div><!-- end upcoming-events-grid -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
        HISTORIQUE DES ATELIERS
   ═══════════════════════════════════════════════════════════════════ -->
   <section class="past-workshops section-lg">
@@ -654,114 +728,40 @@ import '../styles/global.css';
     color: rgba(255, 255, 255, 0.8);
   }
 
-  .upcoming-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    .upcoming-list {
-      grid-template-columns: 1fr;
-      max-width: 500px;
-    }
-  }
-
-  .upcoming-list {
-    align-items: stretch;
-  }
-
-  .featured-event {
-    background: white;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-elevated);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .no-upcoming-card {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl) var(--space-lg);
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-  .featured-event-image {
-    overflow: hidden;
-  }
-
-  .featured-event-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .featured-event-content {
-    padding: var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-  }
-
-  .featured-event-content .btn {
-    margin-top: auto;
-    align-self: flex-start;
-  }
-
+  /* ── Shared event meta ── */
   .featured-event-meta {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
   }
 
   .event-badge {
     background: var(--color-terracotta);
     color: white;
-    padding: 0.35rem 0.75rem;
+    padding: 0.3rem 0.65rem;
     border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .event-date-text {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--color-taupe);
-  }
-
-  .featured-event-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--space-xs);
-  }
-
-  .featured-event-content > p {
-    font-size: 0.95rem;
-    color: var(--color-brown);
-    opacity: 0.75;
-    line-height: 1.6;
-    margin-bottom: var(--space-sm);
   }
 
   .featured-event-tags {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: var(--space-sm);
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
   }
 
   .featured-event-tags span {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.72rem;
+    padding: 0.25rem 0.55rem;
     background: var(--color-sage-light);
     color: var(--color-sage);
     border-radius: var(--radius-full);
@@ -771,32 +771,254 @@ import '../styles/global.css';
   .featured-event-location {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
+    gap: 0.4rem;
+    font-size: 0.82rem;
     color: var(--color-taupe);
-    margin-bottom: var(--space-md);
+    margin-bottom: 0.4rem;
   }
 
-  .featured-event-location svg {
-    flex-shrink: 0;
+  .featured-event-invite {
+    font-size: 0.82rem;
+    color: var(--color-terracotta);
+    font-weight: 600;
+    background: rgba(193, 88, 62, 0.07);
+    border-left: 3px solid var(--color-terracotta);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 0.4rem 0.65rem;
+    line-height: 1.4;
   }
 
-  .featured-event-coordinator {
-    font-size: 0.9rem;
+  /* ── Grid wrapper ── */
+  .upcoming-events-grid {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ── Tropisme : compact card avec carousel photos ── */
+  .event-compact-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .ecc-photos {
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+  }
+
+  .ecc-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .ecc-photo.ecc-active { opacity: 1; }
+
+  .ecc-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-brown-dark);
+    transition: background 0.2s;
+    z-index: 2;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .ecc-arrow:hover { background: white; }
+  .ecc-prev { left: 8px; }
+  .ecc-next { right: 8px; }
+
+  .ecc-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 2;
+  }
+
+  .ecc-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+    transition: background 0.2s, width 0.2s;
+  }
+
+  .ecc-dot.ecc-dot-active {
+    background: white;
+    width: 16px;
+    border-radius: 3px;
+  }
+
+  .ecc-info {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .ecc-info h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ecc-desc {
+    font-size: 0.87rem;
     color: var(--color-brown);
-    opacity: 0.7;
-    margin-bottom: var(--space-md);
-    font-style: italic;
+    opacity: 0.72;
+    line-height: 1.5;
+    margin: 0;
   }
 
-  .featured-event-coordinator strong {
+  .ecc-coordinator {
+    font-size: 0.8rem;
+    color: var(--color-brown);
+    opacity: 0.6;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .ecc-coordinator strong {
     color: var(--color-brown-dark);
     font-style: normal;
   }
 
-  .btn-large {
-    padding: 1rem 2rem;
+  .ecc-menu-details {
     margin-top: auto;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--color-cream-dark);
+  }
+
+  .ecc-menu-details summary {
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    user-select: none;
+  }
+
+  .ecc-menu-details summary::-webkit-details-marker { display: none; }
+
+  /* ── Cueillette Cambodge : teaser compact ── */
+  .event-teaser-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid #EDE8E3;
+  }
+
+  .etc-band {
+    height: 6px;
+    background: linear-gradient(to right, #3d6b34, #8aad5a);
+    flex-shrink: 0;
+  }
+
+  .etc-content {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .etc-content h3 {
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .etc-content p {
+    font-size: 0.86rem;
+    color: var(--color-brown);
+    opacity: 0.72;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .etc-badge-nature {
+    background: var(--color-sage) !important;
+    color: white !important;
+  }
+
+  .etc-btn {
+    align-self: flex-start;
+    margin-top: 0.2rem;
+    background: var(--color-sage);
+    color: white;
+    font-size: 0.83rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .etc-btn:hover { background: #4e7a37; }
+
+  @media (max-width: 640px) {
+    .upcoming-events-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     EVENT MENU
+  ═══════════════════════════════════════════════════════════════════ */
+  .event-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .menu-course {
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--color-cream-dark);
+  }
+
+  .menu-course:last-child {
+    border-bottom: none;
+  }
+
+  .menu-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--color-terracotta);
+    margin-bottom: 3px;
+  }
+
+  .menu-course p {
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    line-height: 1.4;
+    margin: 0;
   }
 
   /* ═══════════════════════════════════════════════════════════════════
@@ -1165,4 +1387,25 @@ import '../styles/global.css';
     });
   });
   }); // end DOMContentLoaded
+
+  // Photo carousel for Tropisme event
+  (function() {
+    const photosEl = document.getElementById('ecc-photos');
+    if (!photosEl) return;
+    const photos = Array.from(photosEl.querySelectorAll('.ecc-photo'));
+    const dots = Array.from(photosEl.querySelectorAll('.ecc-dot'));
+    let current = 0;
+
+    function goTo(idx) {
+      photos[current].classList.remove('ecc-active');
+      dots[current].classList.remove('ecc-dot-active');
+      current = (idx + photos.length) % photos.length;
+      photos[current].classList.add('ecc-active');
+      dots[current].classList.add('ecc-dot-active');
+    }
+
+    photosEl.querySelector('.ecc-prev')?.addEventListener('click', () => goTo(current - 1));
+    photosEl.querySelector('.ecc-next')?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+  })();
 </script>
