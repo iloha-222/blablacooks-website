@@ -159,80 +159,6 @@ import '../styles/global.css';
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════
-       PROCHAIN EVENEMENT
-  ═══════════════════════════════════════════════════════════════════ -->
-  <section class="next-workshop" id="prochain">
-    <div class="container">
-      <div class="section-header section-header-spaced section-header-light" data-animate>
-        <span class="label label-gold">À venir</span>
-        <h2>Prochains rendez-vous</h2>
-      </div>
-
-      <div class="upcoming-events-grid">
-      <!-- Tropisme : carte compacte avec carousel photos -->
-      <article class="event-compact-card" data-animate>
-        <div class="ecc-photos" id="ecc-photos">
-          <img src="/vrais-photos/evenements/tropisme-juin-2026/groupe.jpg" class="ecc-photo ecc-active" alt="Les cuistots au Café Tropisme" />
-          <img src="/vrais-photos/evenements/tropisme-juin-2026/majid.jpg" class="ecc-photo" alt="Majid Hoseini en cuisine" />
-          <img src="/vrais-photos/evenements/tropisme-juin-2026/yousriya.jpg" class="ecc-photo" alt="Yousriya Mohamad" />
-          <button class="ecc-arrow ecc-prev" aria-label="Photo précédente">‹</button>
-          <button class="ecc-arrow ecc-next" aria-label="Photo suivante">›</button>
-          <div class="ecc-dots">
-            <span class="ecc-dot ecc-dot-active"></span>
-            <span class="ecc-dot"></span>
-            <span class="ecc-dot"></span>
-          </div>
-        </div>
-        <div class="ecc-info">
-          <div class="featured-event-meta">
-            <span class="event-badge">Soirée unique</span>
-            <span class="event-date-text">Vendredi 19 juin 2026</span>
-          </div>
-          <h3>Journée Mondiale des personnes Réfugiées</h3>
-          <p class="ecc-desc">Soirée de gastronomie interculturelle au Café Tropisme, avec nos cuistots invités et le Chef Thibault Murat.</p>
-          <div class="featured-event-tags">
-            <span>Soudanais</span><span>Birman</span><span>Afghan</span>
-          </div>
-          <div class="featured-event-location">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Café Tropisme, Montpellier
-          </div>
-          <div class="ecc-coordinator">
-            Avec <strong>Yousriya, Thwelt Thwelt, Naw Zul Zul, Arkar</strong> et <strong>Majid Hoseini</strong> du « Petit Kaboul »
-          </div>
-          <div class="featured-event-invite">
-            Membres de l'asso, rejoignez-nous ce soir à la Halle Tropisme !
-          </div>
-          <details class="ecc-menu-details">
-            <summary>Voir le menu <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></summary>
-            <div class="event-menu">
-              <div class="menu-course">
-                <span class="menu-label">Entrée · Soudanais</span>
-                <p>Falafels et Salade d'Aubergines à la cacahuète <em>« Al Aswad »</em></p>
-              </div>
-              <div class="menu-course">
-                <span class="menu-label">Plat · Birman</span>
-                <p>Soupe de nouilles au lait de coco et poulet <em>« Ohn No Khao Swe »</em></p>
-              </div>
-              <div class="menu-course">
-                <span class="menu-label">Plat · Afghan</span>
-                <p>Bœuf en sauce, tomates fraîches et riz afghan</p>
-              </div>
-              <div class="menu-course">
-                <span class="menu-label">Dessert · Birman</span>
-                <p>Lait de coco <em>« Tacu »</em></p>
-              </div>
-            </div>
-          </details>
-        </div>
-      </article>
-
-      </div><!-- end upcoming-events-grid -->
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════════
        HISTORIQUE DES ATELIERS
   ═══════════════════════════════════════════════════════════════════ -->
   <section class="past-workshops section-lg">
@@ -244,6 +170,14 @@ import '../styles/global.css';
       </div>
 
       <div class="mosaic-grid">
+        <article class="mosaic-item" data-animate data-gallery="tropisme-juin-2026" data-count="9">
+          <img src="/vrais-photos/ateliers/tropisme-juin-2026/1.jpg" alt="Journée Mondiale des personnes Réfugiées au Café Tropisme" loading="lazy" />
+          <span class="mosaic-gallery-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> 9</span>
+          <div class="mosaic-overlay">
+            <span class="mosaic-title">Journée Mondiale des personnes Réfugiées</span>
+            <span class="mosaic-date">Juin 2026</span>
+          </div>
+        </article>
         <article class="mosaic-item" data-animate data-gallery="palestinien-2026" data-count="10">
           <img src="/vrais-photos/ateliers/palestinien-2026/1.jpg" alt="Cuisine Palestinienne Végétarienne" loading="lazy" />
           <span class="mosaic-gallery-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> 10</span>
@@ -1387,25 +1321,4 @@ import '../styles/global.css';
     });
   });
   }); // end DOMContentLoaded
-
-  // Photo carousel for Tropisme event
-  (function() {
-    const photosEl = document.getElementById('ecc-photos');
-    if (!photosEl) return;
-    const photos = Array.from(photosEl.querySelectorAll('.ecc-photo'));
-    const dots = Array.from(photosEl.querySelectorAll('.ecc-dot'));
-    let current = 0;
-
-    function goTo(idx) {
-      photos[current].classList.remove('ecc-active');
-      dots[current].classList.remove('ecc-dot-active');
-      current = (idx + photos.length) % photos.length;
-      photos[current].classList.add('ecc-active');
-      dots[current].classList.add('ecc-dot-active');
-    }
-
-    photosEl.querySelector('.ecc-prev')?.addEventListener('click', () => goTo(current - 1));
-    photosEl.querySelector('.ecc-next')?.addEventListener('click', () => goTo(current + 1));
-    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
-  })();
 </script>
