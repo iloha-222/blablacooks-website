@@ -1320,5 +1320,15 @@ import '../styles/global.css';
       openLightbox(gallery, count);
     });
   });
+
+  // Deep-link depuis l'accueil : #galerie-<key> ouvre directement la galerie
+  const hashMatch = location.hash.match(/^#galerie-(.+)$/);
+  if (hashMatch) {
+    const card = document.querySelector(`.mosaic-item[data-gallery="${hashMatch[1]}"]`);
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      openLightbox(card.dataset.gallery, parseInt(card.dataset.count));
+    }
+  }
   }); // end DOMContentLoaded
 </script>

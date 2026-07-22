@@ -217,52 +217,56 @@ import '../styles/global.css';
         </button>
         <div class="past-track">
         <!-- Event -1 - Journée Mondiale des Réfugiés -->
-        <article class="past-card" data-animate>
+        <a href="/ateliers-cuisine#galerie-tropisme-juin-2026" class="past-card" data-animate>
           <div class="past-image">
             <img src="/vrais-photos/ateliers/tropisme-juin-2026/1.jpg" alt="Journée Mondiale des personnes Réfugiées" class="pos-center" loading="lazy" />
           </div>
+          <span class="past-photos-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> Voir les photos</span>
           <div class="past-body">
             <span class="past-date">19 Juin 2026</span>
             <h3>Journée Mondiale des personnes Réfugiées</h3>
             <p>Soirée de gastronomie interculturelle au Café Tropisme — cuisines soudanaise, birmane et afghane. Avec Yousriya, Thwelt Thwelt, Naw Zul Zul, Arkar et Majid Hoseini.</p>
           </div>
-        </article>
+        </a>
 
         <!-- Event 0 - Cuisine Palestinienne -->
-        <article class="past-card" data-animate>
+        <a href="/ateliers-cuisine#galerie-palestinien-2026" class="past-card" data-animate>
           <div class="past-image">
             <img src="/vrais-photos/ateliers/palestinien-2026/6.jpg" alt="Cuisine Palestinienne Végétarienne" class="pos-center" loading="lazy" />
           </div>
+          <span class="past-photos-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> Voir les photos</span>
           <div class="past-body">
             <span class="past-date">22 Mars 2026</span>
             <h3>Cuisine Palestinienne Végétarienne</h3>
             <p>Soupe de lentilles corail, houmous, moutabal et kunefe au fromage et à l'eau de rose. Avec Sawal, co-animé par Hinde Massaoudi.</p>
           </div>
-        </article>
+        </a>
 
         <!-- Event 1 - Brunch Camerounais -->
-        <article class="past-card" data-animate>
+        <a href="/ateliers-cuisine#galerie-camerounais-2026" class="past-card" data-animate>
           <div class="past-image">
             <img src="/vrais-photos/ateliers/camerounais-2026/6.jpg" alt="Brunch Camerounais" class="pos-center" loading="lazy" />
           </div>
+          <span class="past-photos-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> Voir les photos</span>
           <div class="past-body">
             <span class="past-date">8 Février 2026</span>
             <h3>Brunch Camerounais</h3>
             <p>Beignets de haricots croustillants et bouillie crémeuse, tradition matinale d'Afrique de l'Ouest. Avec Adèle Nguelefack.</p>
           </div>
-        </article>
+        </a>
 
         <!-- Event 1 -->
-        <article class="past-card" data-animate>
+        <a href="/ateliers-cuisine#galerie-afghan-2025" class="past-card" data-animate>
           <div class="past-image">
             <img src="/vrais-photos/ateliers/afghan-2025/3.jpg" alt="Mantus Afghans" class="pos-center" loading="lazy" />
           </div>
+          <span class="past-photos-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> Voir les photos</span>
           <div class="past-body">
             <span class="past-date">7 Décembre 2025</span>
             <h3>Brunch de Fête Afghan</h3>
             <p>Mantus, raviolis à la viande et aux épices avec sauce au yaourt, et ferni aux pistaches. Avec Fawzia Rahmani.</p>
           </div>
-        </article>
+        </a>
 
         <!-- Event 2 -->
         <article class="past-card" data-animate>
@@ -1348,6 +1352,31 @@ import '../styles/global.css';
 
   .past-card:hover .past-image img {
     transform: scale(1.02);
+  }
+
+  .past-card { cursor: pointer; }
+
+  .past-photos-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-out-expo);
+  }
+
+  .past-card:hover .past-photos-badge {
+    opacity: 1;
   }
 
   .past-body {
